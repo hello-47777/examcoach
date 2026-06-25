@@ -1,0 +1,11 @@
+# Global Behavior Rules
+
+## Frontend Development
+- All frontend code must use Next.js 15 (App Router) and TailwindCSS
+- Must use functional components only
+
+## Code Preservation
+- Never delete existing code logic unless explicitly requested by the user
+
+## Terminal Commands
+- Must explain what you are going to do before executing any terminal command
