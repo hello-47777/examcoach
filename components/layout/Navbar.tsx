@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 interface NavbarProps {
-  active?: 'home' | 'dashboard' | 'pricing';
+  active?: 'home' | 'dashboard';
 }
 
 export default function Navbar({ active = 'home' }: NavbarProps) {
@@ -23,9 +23,6 @@ export default function Navbar({ active = 'home' }: NavbarProps) {
           </Link>
           <Link href="/dashboard" className={linkClass('dashboard')}>
             Dashboard
-          </Link>
-          <Link href="#" className={linkClass('pricing')}>
-            Pricing
           </Link>
         </div>
       </div>

@@ -15,7 +15,7 @@ import type { Metadata } from "next";
 const PAGE_TITLE = "15 YKI Writing Tips to Pass Faster";
 const PAGE_DESCRIPTION =
   "15 detailed YKI writing tips for 2026, each with a clear explanation, a real example, and the common mistake to avoid, so you can raise your score faster.";
-const PAGE_URL = "https://examcoach.ai/finland/yki-writing-tips";
+const PAGE_URL = "https://examcoach.ca/finland/yki-writing-tips";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -30,14 +30,6 @@ export const metadata: Metadata = {
     siteName: "ExamCoach.ai",
     locale: "en_US",
     type: "article",
-    images: [
-      {
-        url: "https://examcoach.ai/og/yki-writing-tips.png",
-        width: 1200,
-        height: 630,
-        alt: "15 YKI Writing Tips to Pass Faster — ExamCoach.ai",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -239,6 +231,25 @@ const faqJsonLd = {
 };
 
 export default function YkiWritingTipsPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://examcoach.ca",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "YKI Writing Tips",
+        item: "https://examcoach.ca/finland/yki-writing-tips",
+      },
+    ],
+  };
+
   return (
     <>
       {/* FAQ Schema (JSON-LD) */}
@@ -246,6 +257,12 @@ export default function YkiWritingTipsPage() {
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      {/* Breadcrumb Schema (JSON-LD) */}
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <main className="min-h-screen bg-white text-slate-900">

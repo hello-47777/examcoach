@@ -316,7 +316,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const path = "/finland/yki-writing-examples";
 
   return {
-    metadataBase: new URL("https://examcoach.ai"),
+    metadataBase: new URL("https://examcoach.ca"),
     title,
     description,
     alternates: {
@@ -352,12 +352,36 @@ export default function YkiWritingExamplesPage() {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://examcoach.ca",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "YKI Writing Examples",
+        item: "https://examcoach.ca/finland/yki-writing-examples",
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <main className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14 lg:py-20">
