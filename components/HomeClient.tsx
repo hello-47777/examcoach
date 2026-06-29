@@ -157,12 +157,19 @@ export default function HomeClient() {
               </button>
             </div>
 
+            {/* Upgrade hint below Check button */}
+            {!isAuthLoading && !isPro && (
+              <p className="mt-2 text-xs text-gray-400">
+                Students who use all free attempts usually upgrade before the exam
+              </p>
+            )}
+
             {/* Free checks remaining */}
             {!isAuthLoading && (
               <p className="mt-4 text-sm text-gray-500">
                 {isPro
                   ? 'Pro account — unlimited checks'
-                  : `You have ${remainingChecks} free check${remainingChecks === 1 ? '' : 's'} remaining — use them wisely`}
+                  : `You have ${remainingChecks} free check${remainingChecks === 1 ? '' : 's'} remaining — each one is valuable for your exam preparation`}
               </p>
             )}
 
@@ -276,15 +283,15 @@ export default function HomeClient() {
                         <ul className="space-y-2 text-sm text-gray-700">
                           <li className="flex items-start gap-2">
                             <span className="text-gray-400 mt-0.5">✓</span>
-                            <span className="text-gray-500">Score only (no explanation)</span>
+                            <span className="text-gray-500">Score only</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <span className="text-gray-300 mt-0.5">❌</span>
-                            <span className="text-gray-400">No grammar corrections</span>
+                            <span className="text-gray-400">No corrections</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <span className="text-gray-300 mt-0.5">❌</span>
-                            <span className="text-gray-400">No vocabulary improvement suggestions</span>
+                            <span className="text-gray-400">No grammar fixes</span>
                           </li>
                         </ul>
                       </div>
@@ -308,11 +315,11 @@ export default function HomeClient() {
                           </li>
                           <li className="flex items-start gap-2">
                             <span className="text-emerald-300 mt-0.5">✓</span>
-                            <span>Vocabulary upgrade suggestions</span>
+                            <span>Vocabulary improvements</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <span className="text-emerald-300 mt-0.5">✓</span>
-                            <span>Band improvement guidance</span>
+                            <span>Band-level suggestions</span>
                           </li>
                         </ul>
                       </div>
@@ -371,15 +378,15 @@ export default function HomeClient() {
                 {/* Unlock CTA - below the blurred sections */}
                 {!isPro && (
                   <div className="flex flex-col items-center justify-center text-center py-6">
-                    {/* Identity contrast warning */}
+                    {/* Loss hint */}
                     <p className="mb-4 text-sm font-medium text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-4 py-2">
-                      Your essay is missing examiner-level corrections
+                      You are currently missing detailed corrections that affect your final score
                     </p>
                     <button
                       type="button"
                       className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-lg font-semibold rounded-xl shadow-lg hover:from-blue-700 hover:to-blue-800 hover:shadow-xl transition-all"
                     >
-                      Reveal My Mistakes &amp; Improve My Score
+                      See What You're Missing to Reach B2
                     </button>
                     <p className="mt-3 text-sm text-gray-600">
                       See detailed corrections like a real examiner
@@ -387,8 +394,12 @@ export default function HomeClient() {
                     <p className="mt-1 text-sm text-gray-500">
                       Improve your score in minutes
                     </p>
+                    {/* Future failure implication */}
+                    <p className="mt-4 text-xs text-gray-500 italic">
+                      Most users improve 0.5–1.5 levels after unlocking corrections
+                    </p>
                     {/* Regret triggers */}
-                    <p className="mt-4 text-xs text-gray-400 italic">
+                    <p className="mt-2 text-xs text-gray-400 italic">
                       Fix this essay before your next attempt
                     </p>
                     <p className="mt-1 text-xs text-gray-400 italic">
@@ -396,6 +407,10 @@ export default function HomeClient() {
                     </p>
                     <p className="mt-4 text-xs text-gray-400">
                       Join 247+ learners improving their YKI score this week
+                    </p>
+                    {/* Direct score impact */}
+                    <p className="mt-2 text-xs text-gray-500 italic">
+                      Fixing this essay now can directly improve your exam score
                     </p>
                   </div>
                 )}

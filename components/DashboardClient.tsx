@@ -114,6 +114,11 @@ export default function DashboardClient() {
               Track every essay you submit, review estimated levels, and monitor your
               score improvement over time.
             </p>
+            {totalEssays > 0 && (
+              <p className="mt-2 text-xs text-gray-400">
+                Your past essays show your improvement pattern
+              </p>
+            )}
           </div>
 
           <Link
