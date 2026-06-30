@@ -1,192 +1,181 @@
-import React from 'react';
-import Link from 'next/link';
+import Link from "next/link";
 
 export const metadata = {
-  title: "YKI Writing Job Application: An Immigration Advisor's Guide",
-  description: "Learn how to write a winning job application letter for the Finnish YKI B1 exam. Master the structure, vocabulary, and avoid common mistakes to secure your passing grade."
+  title: "YKI Writing: Job Application Letter Guide & Examples",
+  description: "Master the job application letter for the Finnish YKI exam. Learn the correct structure, avoid common mistakes, and study a perfect B1-level example.",
 };
 
 export default function YkiJobApplicationPage() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Do I need to write about my real work experience in the YKI test?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No, you do not. The examiners are testing your Finnish language skills, not your actual resume. It is often better to invent a simple job history (like working in a café or cleaning) if it makes it easier to use correct B1-level vocabulary."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is spoken Finnish (puhekieli) allowed in a job application?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. A job application is a formal or semi-formal document. You must use standard written Finnish (kirjakieli). Using slang or spoken abbreviations will negatively impact your final score."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long should the YKI job application letter be?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The length should naturally cover all the bullet points provided in the exam prompt. Typically, 5 to 8 well-structured sentences are enough to demonstrate B1 proficiency and complete the task."
-        }
-      }
-    ]
-  };
-
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <article className="prose max-w-none">
-          <h1>YKI Writing Job Application: An Immigration Advisor&apos;s Guide</h1>
+    <div className="min-h-screen bg-[#FFFFFF] px-4 py-12">
+      <div className="mx-auto max-w-4xl">
+        <article className="prose prose-lg max-w-none text-gray-800">
+          <h1 className="mb-8 text-4xl font-extrabold text-[#2563EB]">
+            Master the YKI Job Application Letter: An Examiner&apos;s Guide
+          </h1>
 
           <p>
-            Hello. As an immigration advisor, I work with hundreds of clients every year whose primary goal is securing Finnish citizenship. To get that blue passport, you need to pass the YKI test (Yleinen kielitutkinto) at the B1 level. One of the most critical and frequently tested practical tasks in this exam is the YKI writing job application letter (<em>työpaikkahakemus</em>).
+            When evaluating the Finnish YKI test (Yleinen kielitutkinto), one of the most reliable indicators of a candidate&apos;s proficiency is how they handle formal communication. The job application letter (<em>työhakemus</em>) is a high-frequency topic. It tests your ability to structure a formal text, use polite phrasing, and describe your skills accurately. As an examiner, I look for clarity, standard written language, and direct answers to the prompt&apos;s bullet points.
           </p>
 
+          <h2 className="mt-10 text-2xl font-bold text-gray-900">
+            Step-by-Step Formatting Guide
+          </h2>
           <p>
-            Writing a job application in Finnish might seem intimidating, especially when the clock is ticking in the exam room. However, it is actually one of the most predictable tasks you can face. The examiners want to see if you can function in Finnish society. They want to know if you can present yourself professionally, state your skills, and request an interview. Let&apos;s break down exactly how to secure maximum points on this task.
+            To achieve a solid B1 level, your letter must follow a predictable, logical structure. Do not try to be overly creative; focus on professional communication.
           </p>
-
-          <h2>Essential Vocabulary for the Workplace</h2>
-
-          <p>
-            Before we look at the structure, you must equip yourself with the right tools. If you use basic A1 words, you will not achieve a B1 score. You need vocabulary that demonstrates you belong in a Finnish working environment. Memorize these key terms:
-          </p>
-
           <ul>
-            <li><strong>Työpaikkahakemus</strong> – Job application</li>
-            <li><strong>Työkokemus</strong> – Work experience</li>
-            <li><strong>Kielitaito</strong> – Language skills</li>
-            <li><strong>Olen kiinnostunut...</strong> – I am interested in...</li>
-            <li><strong>Ahkera ja luotettava</strong> – Hardworking and reliable</li>
-            <li><strong>Asiakaspalvelu</strong> – Customer service</li>
-            <li><strong>Työhaastattelu</strong> – Job interview</li>
-            <li><strong>Odotan vastaustanne</strong> – I look forward to your reply</li>
+            <li>
+              <strong>1. Professional Greeting:</strong> Always start formally. Use <em>Hyvä rekrytoija</em> (Dear Recruiter) or <em>Hyvä herra/rouva</em> (Dear Sir/Madam).
+            </li>
+            <li>
+              <strong>2. State Your Purpose:</strong> In the very first sentence, explain why you are writing. Mention where you saw the job advertisement.
+            </li>
+            <li>
+              <strong>3. Highlight Your Experience:</strong> Briefly explain your background, previous work experience, and your current Finnish language level. Keep sentences clear and concise.
+            </li>
+            <li>
+              <strong>4. Express Motivation:</strong> State why you want this specific job. Using the conditional form here (<em>haluaisin</em> - I would like) shows politeness and grammatical competence.
+            </li>
+            <li>
+              <strong>5. Formal Sign-off:</strong> End the letter with a polite closing, such as <em>Ystävällisin terveisin</em> (Kind regards), followed by your full name.
+            </li>
           </ul>
 
-          <h2>The Writing Structure of a Finnish Job Application</h2>
-
           <p>
-            A successful response must follow a logical, professional structure. Finnish workplace culture values directness. Do not write a long, poetic introduction. Get straight to the point.
+            Mastering these core components is essential. For more detailed strategies on organizing your paragraphs effectively, review our essential <Link href="/finland/yki-writing-tips" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing tips</Link> to ensure you meet all structural requirements.
           </p>
 
-          <h3>1. The Greeting</h3>
+          <h2 className="mt-10 text-2xl font-bold text-gray-900">
+            Common Mistakes Candidates Make
+          </h2>
           <p>
-            Keep it professional. Do not use overly casual greetings like &quot;Moi&quot; when applying for a job.
-            Use: <em>Hei,</em> or <em>Hyvä rekrytoija,</em> (Dear recruiter).
+            Many students fail to secure a level 3 or 4 because they make fundamental stylistic errors. Here are the most common pitfalls you must avoid:
           </p>
+          <ul>
+            <li>
+              <strong>Using Spoken Language (Puhekieli):</strong> Writing <em>&quot;Moi, mä haluun tän työn&quot;</em> is an immediate red flag. A job application must always use standard written Finnish (<em>kirjakieli</em>).
+            </li>
+            <li>
+              <strong>Ignoring the Prompt&apos;s Instructions:</strong> The exam will always give you 3 to 4 specific points you must include. If you forget to mention your availability or previous experience, you will lose points directly based on the official <Link href="/finland/yki-writing-scoring" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing scoring</Link> rubrics.
+            </li>
+            <li>
+              <strong>Overcomplicating Grammar:</strong> Trying to use complex clause equivalents (lauseenvastikkeet) when you aren&apos;t confident often leads to completely incomprehensible sentences. Stick to simple, correct main and subordinate clauses (using <em>että</em>, <em>koska</em>, <em>kun</em>).
+            </li>
+          </ul>
 
-          <h3>2. The Purpose (Why are you writing?)</h3>
+          <h2 className="mt-10 text-2xl font-bold text-gray-900">
+            B1-Level Example: Application for a Shop Assistant
+          </h2>
           <p>
-            State exactly which job you are applying for in the very first sentence. 
-            Example: <em>Kirjoitan teille, koska haluan hakea myyjän paikkaa yrityksestänne.</em> (I am writing to you because I want to apply for the salesperson position at your company.)
+            Below is an excellent example of a B1-level response. It is polite, answers the common prompt requirements, and uses appropriate vocabulary without overreaching.
           </p>
-
-          <h3>3. The Evidence (Skills and Experience)</h3>
-          <p>
-            Address the bullet points from the exam prompt. Usually, the prompt asks about your background. 
-            Example: <em>Minulla on paljon kokemusta asiakaspalvelusta. Olin kaksi vuotta töissä ravintolassa.</em> (I have a lot of experience in customer service. I worked in a restaurant for two years.)
-          </p>
-
-          <h3>4. The Closing and Availability</h3>
-          <p>
-            Tell them when you can start and ask for an interview.
-            Example: <em>Voin aloittaa työt ensi kuussa. Toivon, että pääsen työhaastatteluun.</em> (I can start work next month. I hope I can get to a job interview.)
-          </p>
-
-          <h3>5. The Sign-off</h3>
-          <p>
-            Always end with the standard formal Finnish closing: <em>Ystävällisin terveisin,</em> followed by your name.
-          </p>
-
-          <div className="my-10 p-8 rounded-xl bg-gradient-to-r from-blue-600 to-green-500 text-white shadow-lg not-prose">
-            <h3 className="text-2xl font-bold mb-4 text-white mt-0">Practice makes perfect!</h3>
-            <p className="text-white text-lg mb-6">
-              Check your YKI writing score instantly with our AI Examiner. Get B1-level corrections and pass your test with confidence.
+          
+          <div className="my-6 rounded-xl border border-gray-200 bg-gray-50 p-6 shadow-sm">
+            <p><strong>Aihe: Työhakemus myyjän paikkaan</strong></p>
+            <p>Hyvä rekrytoija,</p>
+            <p>
+              Huomasin TE-palvelujen verkkosivuilla, että etsitte uutta myyjää teidän vaatekauppaanne. Kirjoitan teille, koska haluaisin hakea tätä työpaikkaa.
             </p>
-            <Link href="/" className="inline-block px-8 py-4 bg-white text-blue-700 font-bold rounded-lg hover:bg-gray-100 transition-colors">
-              Check Your Writing Score
-            </Link>
+            <p>
+              Olen 28-vuotias ja asun Helsingissä. Minulla on aikaisempaa kokemusta asiakaspalvelusta. Olin töissä kahvilassa kaksi vuotta kotimaassani. Olen ahkera, ystävällinen ja opin nopeasti uusia asioita. Puhun sujuvaa englantia ja minun suomen kielen taitoni on keskitasolla. Ymmärrän hyvin suomea ja pystyn palvelemaan asiakkaita suomeksi.
+            </p>
+            <p>
+              Haluaisin työskennellä teillä, koska pidän asiakaspalvelutyöstä ja olen kiinnostunut muodista. Voin aloittaa työt heti ja olen valmis tekemään myös ilta- ja viikonloppuvuoroja.
+            </p>
+            <p>
+              Toivon, että voin tulla työhaastatteluun kertomaan lisää itsestäni. Minun ansioluetteloni on liitteenä.
+            </p>
+            <p>Ystävällisin terveisin,<br/>Anna Malli</p>
           </div>
 
-          <h2>Example Answer: Applying for a Shop Assistant Position</h2>
-
+          <h2 className="mt-10 text-2xl font-bold text-gray-900">
+            Essential Job Application Vocabulary
+          </h2>
           <p>
-            Let&apos;s look at a practical example. Imagine the exam prompt asks you to apply for a part-time job at a local supermarket. You need to tell them why you want the job, what your previous experience is, and when you can work.
+            Memorize these key terms to elevate the professionalism of your text:
           </p>
-
-          <p><strong>Finnish Response:</strong></p>
-          <p>
-            Hei,<br /><br />
-            Huomasin ilmoituksenne netissä ja haluan hakea osa-aikaista myyjän paikkaa ruokakaupastanne. Olen erittäin kiinnostunut tästä työstä, koska pidän asiakaspalvelusta ja haluan työskennellä ihmisten parissa.<br /><br />
-            Minulla on jo hyvää työkokemusta. Työskentelin viime vuonna kahvilassa, jossa myin tuotteita ja siivosin. Työntekijänä olen ahkera, positiivinen ja luotettava. Äidinkieleni on englanti, mutta puhun myös suomea melko sujuvasti.<br /><br />
-            Opiskelen aamuisin, joten voin tehdä töitä iltaisin ja viikonloppuisin. Voin aloittaa työt heti ensi viikolla.<br /><br />
-            Toivon, että voin tulla työhaastatteluun kertomaan lisää itsestäni.<br /><br />
-            Ystävällisin terveisin,<br />
-            Alex Hakija
-          </p>
-
-          <p><strong>English Translation:</strong></p>
-          <p>
-            Hello,<br /><br />
-            I noticed your advertisement online and I want to apply for the part-time salesperson position at your supermarket. I am very interested in this job because I like customer service and want to work with people.<br /><br />
-            I already have good work experience. Last year I worked in a café, where I sold products and cleaned. As an employee, I am hardworking, positive, and reliable. My native language is English, but I also speak Finnish quite fluently.<br /><br />
-            I study in the mornings, so I can work in the evenings and on weekends. I can start work right next week.<br /><br />
-            I hope that I can come to a job interview to tell you more about myself.<br /><br />
-            Kind regards,<br />
-            Alex Hakija
-          </p>
-
-          <h2>Common Mistakes That Sabotage Your Score</h2>
-
-          <p>
-            As an advisor reviewing practice tests, I see candidates make the same preventable errors repeatedly. If you want to understand how heavily these mistakes weigh, I highly recommend reviewing our detailed breakdown of <Link href="/finland/yki-writing-scoring">YKI writing scoring</Link>.
-          </p>
-
           <ul>
-            <li><strong>Ignoring the Bullet Points:</strong> The exam prompt will give you 3 or 4 specific things to write about (e.g., &quot;Tell them your language skills&quot;). If you write a beautiful letter but forget to mention your language skills, you will lose points for task completion.</li>
-            <li><strong>Using Spoken Language (Puhekieli):</strong> You must write &quot;Minä haluan&quot; instead of &quot;Mä haluun&quot;. Job applications require standard written Finnish (kirjakieli).</li>
-            <li><strong>Complicating the Grammar:</strong> You do not need complex conditional sentences to pass B1. Keep your sentences short and clear. Accuracy is better than complicated mistakes.</li>
+            <li><strong>Työhakemus:</strong> Job application</li>
+            <li><strong>Ansioluettelo (CV):</strong> Resume</li>
+            <li><strong>Työkokemus:</strong> Work experience</li>
+            <li><strong>Asiakaspalvelu:</strong> Customer service</li>
+            <li><strong>Kielitaito:</strong> Language skills</li>
+            <li><strong>Ahkera:</strong> Hardworking</li>
+            <li><strong>Liite:</strong> Attachment</li>
+            <li><strong>Työhaastattelu:</strong> Job interview</li>
           </ul>
-
-          <p>
-            If you are curious about how this formal style differs from other tasks, you should explore more <Link href="/finland/yki-writing-examples">YKI writing examples</Link> to see the difference between formal applications and informal emails.
-          </p>
-
-          <p>
-            Writing a job application in the YKI exam is a formula. Memorize the greetings, the transition phrases, and the formal sign-offs. Apply them carefully to the specific prompt, and you will secure the points you need for your citizenship journey.
-          </p>
-
-          <hr className="my-8" />
-
-          <h2>Frequently Asked Questions</h2>
-          
-          <h3>Do I need to write about my real work experience in the YKI test?</h3>
-          <p>
-            No, you do not. The examiners are testing your Finnish language skills, not your actual resume. It is often better to invent a simple job history (like working in a café or cleaning) if it makes it easier to use correct B1-level vocabulary.
-          </p>
-
-          <h3>Is spoken Finnish (puhekieli) allowed in a job application?</h3>
-          <p>
-            No. A job application is a formal or semi-formal document. You must use standard written Finnish (kirjakieli). Using slang or spoken abbreviations will negatively impact your final score.
-          </p>
-
-          <h3>How long should the YKI job application letter be?</h3>
-          <p>
-            The length should naturally cover all the bullet points provided in the exam prompt. Typically, 5 to 8 well-structured sentences are enough to demonstrate B1 proficiency and complete the task.
-          </p>
-
         </article>
+
+        <div className="my-10 rounded-2xl bg-gradient-to-r from-blue-600 to-teal-500 p-8 text-center text-white shadow-xl">
+          <h3 className="mb-4 text-2xl font-bold text-white">Practice makes perfect!</h3>
+          <p className="mb-6 text-blue-50">Check your YKI writing score instantly with our AI Examiner.</p>
+          <Link href="/" className="inline-block rounded-xl bg-white px-6 py-3 font-semibold text-[#2563EB] shadow-sm transition-colors hover:bg-gray-100">
+            Try Our Free YKI Writing Checker
+          </Link>
+        </div>
+
+        <div className="mt-12 border-t border-gray-200 pt-8">
+          <h2 className="mb-6 text-2xl font-bold text-gray-900">Frequently Asked Questions</h2>
+          
+          <div className="mb-6">
+            <h3 className="text-lg font-semibold text-gray-900">How long should my YKI job application letter be?</h3>
+            <p className="text-[#64748B]">
+              For the intermediate (keskitaso) YKI exam, a formal message like a job application should generally be around 70 to 100 words. It is more important to answer all the prompt&apos;s bullet points clearly than to write a very long text.
+            </p>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-lg font-semibold text-gray-900">Is it acceptable to use spoken language (puhekieli) in this task?</h3>
+            <p className="text-[#64748B]">
+              No. A job application is a formal document. You must use standard written Finnish (kirjakieli). Avoid abbreviations like &quot;mä&quot; or &quot;sä&quot; and use full pronouns like &quot;minä&quot; and &quot;sinä&quot; (or the formal &quot;te&quot;).
+            </p>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-lg font-semibold text-gray-900">What if I don&apos;t have real experience for the job in the prompt?</h3>
+            <p className="text-[#64748B]">
+              The examiners are testing your language skills, not your actual resume. You can entirely invent your work experience, age, and skills to fit the vocabulary you are most comfortable using during the exam.
+            </p>
+          </div>
+        </div>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How long should my YKI job application letter be?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For the intermediate (keskitaso) YKI exam, a formal message like a job application should generally be around 70 to 100 words. It is more important to answer all the prompt's bullet points clearly than to write a very long text."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is it acceptable to use spoken language (puhekieli) in this task?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. A job application is a formal document. You must use standard written Finnish (kirjakieli). Avoid abbreviations like 'mä' or 'sä' and use full pronouns like 'minä' and 'sinä' (or the formal 'te')."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What if I don't have real experience for the job in the prompt?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The examiners are testing your language skills, not your actual resume. You can entirely invent your work experience, age, and skills to fit the vocabulary you are most comfortable using during the exam."
+                  }
+                }
+              ]
+            })
+          }}
+        />
       </div>
-    </>
+    </div>
   );
 }
