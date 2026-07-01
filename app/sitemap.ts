@@ -35,5 +35,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/finland/yki-writing-job-application`,
+      lastModified: now,
+    },
+    {
+      url: `${baseUrl}/finland/yki-writing-complaint-letter`,
+      lastModified: now,
+    },
+    {
+      url: `${baseUrl}/finland/yki-writing-invitation-email`,
+      lastModified: now,
+    },
+    {
+      url: `${baseUrl}/finland/yki-writing-informal-email`,
+      lastModified: now,
+    },
+    {
+      url: `${baseUrl}/finland/yki-writing-formal-email`,
+      lastModified: now,
+    },
+    {
+      url: `${baseUrl}/finland/yki-writing-advantages-disadvantages-essay`,
+      lastModified: now,
+    },
   ];
 }
