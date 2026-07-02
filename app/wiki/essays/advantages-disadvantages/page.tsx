@@ -47,7 +47,7 @@ export default function YkiAdvantagesDisadvantagesPage() {
           </p>
           <ul>
             <li>
-              <strong>Ignoring One Side Completely:</strong> If the prompt asks for advantages AND disadvantages, but you only write about why something is great, you have failed the task instructions. This directly impacts your grade based on the official <Link href="/finland/yki-writing-scoring" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing scoring</Link> rubrics, which penalize incomplete responses.
+              <strong>Ignoring One Side Completely:</strong> If the prompt asks for advantages AND disadvantages, but you only write about why something is great, you have failed the task instructions. This directly impacts your grade based on the official <Link href="/wiki/scoring/yki-b1-guide" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing scoring</Link> rubrics, which penalize incomplete responses.
             </li>
             <li>
               <strong>Mixing Pros and Cons in One Paragraph:</strong> Jumping back and forth between good and bad points makes your text confusing to read. Always separate them into distinct paragraphs.
@@ -61,7 +61,7 @@ export default function YkiAdvantagesDisadvantagesPage() {
             B1-Level Example: The Pros and Cons of Remote Work
           </h2>
           <p>
-            Remote work (<em>etätyö</em>) is a classic YKI topic. Read the text below to see how our four-paragraph structure works in practice. To explore other types of texts, browse our wide selection of <Link href="/finland/yki-writing-examples" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing examples</Link> to build your confidence.
+            Remote work (<em>etätyö</em>) is a classic YKI topic. Read the text below to see how our four-paragraph structure works in practice. To explore other types of texts, browse our wide selection of <Link href="/wiki/templates/examples" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing examples</Link> to build your confidence.
           </p>
           
           <div className="my-6 rounded-xl border border-gray-200 bg-gray-50 p-6 shadow-sm">
@@ -70,7 +70,7 @@ export default function YkiAdvantagesDisadvantagesPage() {
               Nykyään yhä useampi ihminen tekee töitä kotoa käsin. Etätyö on yleistynyt paljon, ja sillä on sekä merkittäviä etuja että joitakin haittoja.
             </p>
             <p>
-              Ensinnäkin, etätyön suurin etu on se, että se säästää paljon aikaa ja rahaa. Työntekijän ei tarvitse matkustaa autolla tai bussilla työpaikalle. Tämä tarkoittaa, että aamulla voi nukkua pidempään. Lisäksi kotona on usein rauhallisempaa, joten monien on helpompi keskittyä omiin työtehtäviinsä ilman keskeytyksiä.
+              Ensinnäkin, etätyön suurin etu on se, että se säästää paljon aikaa ja rahaa. Työntekijän ei tarvitse matkustaa autolla tai bussilla työpaikalle. Tämä tarkoittaa, että aamulla voi nukkua pidempään. Lisäksi kotona on useat rauhallisempaa, joten monien on helpompi keskittyä omiin työtehtäviinsä ilman keskeytyksiä.
             </p>
             <p>
               Toisaalta etätyössä on myös huonoja puolia. Yksinäisyys on suuri ongelma, koska työntekijä ei näe työkavereitaan kasvotusten. Työpaikan sosiaaliset suhteet, kuten yhteiset kahvitauot, puuttuvat. Toinen haitta on se, että työaika ja vapaa-aika voivat sekoittua toisiinsa, jos tietokone on aina esillä olohuoneessa.
@@ -108,7 +108,7 @@ export default function YkiAdvantagesDisadvantagesPage() {
 
         <div className="mt-12 border-t border-gray-200 pt-8">
           <h2 className="mb-6 text-2xl font-bold text-gray-900">Frequently Asked Questions</h2>
-          
+
           <div className="mb-6">
             <h3 className="text-lg font-semibold text-gray-900">Do I need to have an equal number of pros and cons?</h3>
             <p className="text-[#64748B]">

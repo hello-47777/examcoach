@@ -43,7 +43,7 @@ export default function YkiJobApplicationPage() {
           </ul>
 
           <p>
-            Mastering these core components is essential. For more detailed strategies on organizing your paragraphs effectively, review our essential <Link href="/finland/yki-writing-tips" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing tips</Link> to ensure you meet all structural requirements.
+            Mastering these core components is essential. For more detailed strategies on organizing your paragraphs effectively, review our essential <Link href="/wiki/guides/tips" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing tips</Link> to ensure you meet all structural requirements.
           </p>
 
           <h2 className="mt-10 text-2xl font-bold text-gray-900">
@@ -57,7 +57,7 @@ export default function YkiJobApplicationPage() {
               <strong>Using Spoken Language (Puhekieli):</strong> Writing <em>&quot;Moi, mä haluun tän työn&quot;</em> is an immediate red flag. A job application must always use standard written Finnish (<em>kirjakieli</em>).
             </li>
             <li>
-              <strong>Ignoring the Prompt&apos;s Instructions:</strong> The exam will always give you 3 to 4 specific points you must include. If you forget to mention your availability or previous experience, you will lose points directly based on the official <Link href="/finland/yki-writing-scoring" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing scoring</Link> rubrics.
+              <strong>Ignoring the Prompt&apos;s Instructions:</strong> The exam will always give you 3 to 4 specific points you must include. If you forget to mention your availability or previous experience, you will lose points directly based on the official <Link href="/wiki/scoring/yki-b1-guide" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing scoring</Link> rubrics.
             </li>
             <li>
               <strong>Overcomplicating Grammar:</strong> Trying to use complex clause equivalents (lauseenvastikkeet) when you aren&apos;t confident often leads to completely incomprehensible sentences. Stick to simple, correct main and subordinate clauses (using <em>että</em>, <em>koska</em>, <em>kun</em>).

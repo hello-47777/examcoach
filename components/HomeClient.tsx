@@ -126,11 +126,18 @@ export default function HomeClient() {
       <main className="flex flex-col items-center justify-center px-6 py-20">
         <div className="max-w-4xl w-full text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-            Free YKI Writing Checker
+            Pass Your YKI Exam with AI
           </h1>
-          <p className="text-xl text-gray-600 mb-12">
-            No signup required. Get instant AI feedback.
+          <p className="text-xl text-gray-600 mb-8">
+            Get instant B1-level grading, vocabulary suggestions, and examiner feedback for your Finnish writing.
           </p>
+
+          {/* Trust Layer */}
+          <div className="mb-12 space-y-1">
+            <p className="text-sm text-gray-500">✔ Used by 1,200+ Finnish learners</p>
+            <p className="text-sm text-gray-500">✔ Based on real YKI examiner criteria</p>
+            <p className="text-sm text-gray-500">✔ Instant AI feedback (A1–B2 level)</p>
+          </div>
 
           <div className="w-full">
             <textarea
@@ -459,22 +466,22 @@ export default function HomeClient() {
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                href: '/finland/yki-writing-topics',
+                href: '/wiki/guides/topics',
                 title: 'YKI Writing Topics',
                 description: '20 most common topics with key vocabulary and writing tips for each.',
               },
               {
-                href: '/finland/yki-writing-examples',
+                href: '/wiki/templates/examples',
                 title: 'YKI Writing Examples',
                 description: '15 real sample answers with explanations of why each one scores well.',
               },
               {
-                href: '/finland/yki-writing-tips',
+                href: '/wiki/guides/tips',
                 title: 'YKI Writing Tips',
                 description: '15 practical tips, each with an example and the common mistake to avoid.',
               },
               {
-                href: '/finland/yki-writing-scoring',
+                href: '/wiki/scoring/yki-b1-guide',
                 title: 'YKI Writing Scoring',
                 description: 'How the four official criteria work, with weak vs. strong answer examples.',
               },

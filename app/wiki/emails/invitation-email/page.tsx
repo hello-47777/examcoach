@@ -43,7 +43,7 @@ export default function YkiInvitationEmailPage() {
           </ul>
 
           <p>
-            Mastering these steps ensures you hit every requirement of the prompt. For more advice on how to structure different types of informal messages, I highly recommend checking out our <Link href="/finland/yki-writing-tips" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing tips</Link> to boost your overall confidence.
+            Mastering these steps ensures you hit every requirement of the prompt. For more advice on how to structure different types of informal messages, I highly recommend checking out our <Link href="/wiki/guides/tips" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing tips</Link> to boost your overall confidence.
           </p>
 
           <h2 className="mt-10 text-2xl font-bold text-gray-900">
@@ -68,7 +68,7 @@ export default function YkiInvitationEmailPage() {
             B1-Level Example: A Birthday Party Invitation
           </h2>
           <p>
-            Here is a model answer for a classic YKI prompt: inviting a friend to a birthday party. If you want to see how this compares to formal texts, browse through our other <Link href="/finland/yki-writing-examples" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing examples</Link> to understand the difference in tone.
+            Here is a model answer for a classic YKI prompt: inviting a friend to a birthday party. If you want to see how this compares to formal texts, browse through our other <Link href="/wiki/templates/examples" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing examples</Link> to understand the difference in tone.
           </p>
           
           <div className="my-6 rounded-xl border border-gray-200 bg-gray-50 p-6 shadow-sm">

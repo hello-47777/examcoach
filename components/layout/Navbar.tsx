@@ -17,12 +17,27 @@ export default function Navbar({ active = 'home' }: NavbarProps) {
           ExamCoach.ai
         </Link>
 
-        <div className="flex items-center gap-6 sm:gap-8">
+        <div className="flex items-center gap-4 sm:gap-6">
           <Link href="/" className={linkClass('home')}>
             YKI Writing
           </Link>
+          <Link href="/wiki" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
+            Wiki
+          </Link>
+          <Link href="/#pricing" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
+            Pricing
+          </Link>
           <Link href="/dashboard" className={linkClass('dashboard')}>
             Dashboard
+          </Link>
+          <Link href="/login" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
+            Login
+          </Link>
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:scale-105 hover:bg-blue-700"
+          >
+            Start Free Check
           </Link>
         </div>
       </div>

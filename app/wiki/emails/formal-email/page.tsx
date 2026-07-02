@@ -43,7 +43,7 @@ export default function YkiFormalEmailPage() {
           </ul>
 
           <p>
-            Understanding how authorities expect you to communicate will help you maximize your results on the official <Link href="/finland/yki-writing-scoring" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing scoring</Link> rubric. Clear formatting often separates a level 2 from a level 3 or 4.
+            Understanding how authorities expect you to communicate will help you maximize your results on the official <Link href="/wiki/scoring/yki-b1-guide" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing scoring</Link> rubric. Clear formatting often separates a level 2 from a level 3 or 4.
           </p>
 
           <h2 className="mt-10 text-2xl font-bold text-gray-900">
@@ -68,7 +68,7 @@ export default function YkiFormalEmailPage() {
             B1-Level Example: Emailing Kela About a Missing Document
           </h2>
           <p>
-            Here is a highly realistic example of a formal email sent to Kela regarding a missing attachment. For more general advice on tackling different text types, review our comprehensive <Link href="/finland/yki-writing-tips" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing tips</Link> before your exam.
+            Here is a highly realistic example of a formal email sent to Kela regarding a missing attachment. For more general advice on tackling different text types, review our comprehensive <Link href="/wiki/guides/tips" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing tips</Link> before your exam.
           </p>
           
           <div className="my-6 rounded-xl border border-gray-200 bg-gray-50 p-6 shadow-sm">

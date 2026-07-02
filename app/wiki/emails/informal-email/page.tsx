@@ -43,7 +43,7 @@ export default function YkiInformalEmailPage() {
           </ul>
 
           <p>
-            Following these key <Link href="/finland/yki-writing-tips" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing tips</Link> saved me a lot of time during the actual test, allowing me to focus entirely on my vocabulary and sentence structure.
+            Following these key <Link href="/wiki/guides/tips" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing tips</Link> saved me a lot of time during the actual test, allowing me to focus entirely on my vocabulary and sentence structure.
           </p>
 
           <h2 className="mt-10 text-2xl font-bold text-gray-900">
@@ -68,7 +68,7 @@ export default function YkiInformalEmailPage() {
             B1-Level Example: Asking a Friend for Help Moving
           </h2>
           <p>
-            Here is a realistic model response for an informal task where you ask a friend for help moving (<em>muuttoapu</em>). If you want to see how this compares to formal letters, you can check out other <Link href="/finland/yki-writing-examples" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing examples</Link> to see the contrast in tone.
+            Here is a realistic model response for an informal task where you ask a friend for help moving (<em>muuttoapu</em>). If you want to see how this compares to formal letters, you can check out other <Link href="/wiki/templates/examples" className="font-semibold text-[#2563EB] underline hover:text-blue-800">YKI writing examples</Link> to see the contrast in tone.
           </p>
           
           <div className="my-6 rounded-xl border border-gray-200 bg-gray-50 p-6 shadow-sm">
