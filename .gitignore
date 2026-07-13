@@ -42,3 +42,6 @@ next-env.d.ts
 
 # temp folder for old articles (don't push to git)
 _temp_old_articles/
+
+# drafts folder (don't push to git)
+_drafts/
