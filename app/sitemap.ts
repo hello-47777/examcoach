@@ -126,6 +126,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/wiki/essays/yki-informal-email-example`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/wiki/guides/tips`,
       lastModified,
       changeFrequency: 'monthly',
