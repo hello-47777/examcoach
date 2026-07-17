@@ -204,6 +204,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/wiki/templates/informal-email-phrases`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/wiki/guides/how-to-write-invitation-email`,
       lastModified,
       changeFrequency: 'monthly',
