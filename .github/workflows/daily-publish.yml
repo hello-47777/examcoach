@@ -1,0 +1,31 @@
+name: Daily Publish
+
+on:
+  schedule:
+    # UTC 00:00 = Beijing 08:00 (Asia/Shanghai)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  trigger-vercel-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel Deploy Hook
+        run: |
+          if [ -z "$VERCEL_DEPLOY_HOOK" ]; then
+            echo "❌ VERCEL_DEPLOY_HOOK secret is not set"
+            exit 1
+          fi
+          echo "🚀 Triggering Vercel Deploy Hook..."
+          response=$(curl -s -w "\n%{http_code}" -X POST "$VERCEL_DEPLOY_HOOK")
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | head -n -1)
+          echo "HTTP Status: $http_code"
+          echo "Response: $body"
+          if [ "$http_code" != "200" ]; then
+            echo "❌ Failed to trigger deploy"
+            exit 1
+          fi
+          echo "✅ Vercel deploy triggered successfully"
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}

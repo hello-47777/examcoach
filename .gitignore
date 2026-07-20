@@ -43,5 +43,5 @@ next-env.d.ts
 # temp folder for old articles (don't push to git)
 _temp_old_articles/
 
-# drafts folder (don't push to git)
-_drafts/
+# NOTE: _drafts/ MUST be committed to git so Vercel can run prebuild script
+# Future-dated drafts are automatically filtered by publish-drafts.ts
