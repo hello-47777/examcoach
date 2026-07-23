@@ -1,0 +1,76 @@
+name: IndexNow Submit
+
+# 在 Vercel 部署完成后触发,或手动触发
+on:
+  # daily-publish workflow 完成后自动触发
+  workflow_run:
+    workflows: ["Daily Publish"]
+    types:
+      - completed
+  # 支持手动触发
+  workflow_dispatch:
+
+jobs:
+  submit-to-indexnow:
+    runs-on: ubuntu-latest
+    # 只在主分支成功时运行
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+
+    steps:
+      - name: Wait for Vercel deployment to finish
+        # 等待 Vercel 构建完成 (prebuild 脚本执行 + 部署)
+        run: sleep 180
+
+      - name: Submit sitemap to IndexNow (Bing + Yandex)
+        run: |
+          KEY="06575373a9846ca137bdb6752baa2b5b"
+          HOST="examcoach.ca"
+          KEY_LOCATION="https://examcoach.ca/${KEY}.txt"
+          SITEMAP_URL="https://examcoach.ca/sitemap.xml"
+
+          echo "🚀 Submitting sitemap to IndexNow..."
+          echo "   Host: ${HOST}"
+          echo "   Key Location: ${KEY_LOCATION}"
+          echo "   Sitemap: ${SITEMAP_URL}"
+
+          RESPONSE=$(curl -s -w "\n%{http_code}" \
+            -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{
+              \"host\": \"${HOST}\",
+              \"key\": \"${KEY}\",
+              \"keyLocation\": \"${KEY_LOCATION}\",
+              \"urlList\": [\"${SITEMAP_URL}\"]
+            }")
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | head -n -1)
+
+          echo "HTTP Status: ${HTTP_CODE}"
+          echo "Response Body: ${BODY}"
+
+          # IndexNow 接受的状态码:
+          # 200 = 已接受,即将抓取
+          # 202 = 已接受,稍后抓取
+          # 400 = 错误请求
+          # 403 = 禁止访问 (key 验证失败)
+          # 422 = 无法解析请求
+          if [ "$HTTP_CODE" = "200" ] || [ "$HTTP_CODE" = "202" ]; then
+            echo "✅ IndexNow submission successful"
+          else
+            echo "❌ IndexNow submission failed (HTTP ${HTTP_CODE})"
+            exit 1
+          fi
+
+      - name: Verify IndexNow key file is accessible
+        run: |
+          KEY="06575373a9846ca137bdb6752baa2b5b"
+          KEY_URL="https://examcoach.ca/${KEY}.txt"
+          echo "🔍 Verifying IndexNow key file is accessible at ${KEY_URL}..."
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "${KEY_URL}")
+          if [ "$HTTP_CODE" = "200" ]; then
+            echo "✅ Key file is accessible (HTTP 200)"
+          else
+            echo "❌ Key file is NOT accessible (HTTP ${HTTP_CODE})"
+            exit 1
+          fi
