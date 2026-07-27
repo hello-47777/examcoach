@@ -1,11 +1,11 @@
 import type { MetadataRoute } from 'next';
-import { getPublishedArticles } from '@/lib/articles/getPublishedArticles';
+import { getWikiArticles } from '@/lib/wiki-data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://examcoach.ca';
   const lastModified = new Date();
 
-  const wikiUrls = getPublishedArticles().map((article) => ({
+  const wikiUrls = getWikiArticles().map((article) => ({
     url: `${baseUrl}${article.url}`,
     lastModified,
     changeFrequency: 'monthly' as const,
