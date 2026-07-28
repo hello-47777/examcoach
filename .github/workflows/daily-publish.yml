@@ -29,3 +29,25 @@ jobs:
           echo "✅ Vercel deploy triggered successfully"
         env:
           VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+
+      - name: Wait for Vercel deployment
+        run: |
+          echo "⏳ Waiting 180 seconds for Vercel to finish deployment..."
+          sleep 180
+          echo "✅ Wait complete"
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install tsx
+        run: npm install -g tsx
+
+      - name: Run Bing IndexNow Push
+        run: npx tsx scripts/bing-push.ts
+        env:
+          BING_INDEXNOW_KEY: ${{ secrets.BING_INDEXNOW_KEY }}
