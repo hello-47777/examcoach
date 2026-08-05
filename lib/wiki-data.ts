@@ -14,6 +14,27 @@ export interface WikiArticle {
  * date 字段为发布日期 (北京时间)
  */
 export const scheduledArticles: WikiArticle[] = [
+  // 2026.8.04
+  { slug: 'ai-yki-writing-preparation', category: 'guides', url: '/wiki/guides/ai-yki-writing-preparation', date: '2026-08-04' },
+  { slug: 'practice-yki-writing-online', category: 'guides', url: '/wiki/guides/practice-yki-writing-online', date: '2026-08-04' },
+  // 2026.8.05
+  { slug: 'check-finnish-writing-level-online', category: 'guides', url: '/wiki/guides/check-finnish-writing-level-online', date: '2026-08-05' },
+  { slug: 'yki-writing-feedback-guide', category: 'guides', url: '/wiki/guides/yki-writing-feedback-guide', date: '2026-08-05' },
+  // 2026.8.06
+  { slug: 'how-to-write-message-yki', category: 'guides', url: '/wiki/guides/how-to-write-message-yki', date: '2026-08-06' },
+  { slug: 'yki-message-writing-guide', category: 'guides', url: '/wiki/guides/yki-message-writing-guide', date: '2026-08-06' },
+  // 2026.8.07
+  { slug: 'yki-message-template', category: 'templates', url: '/wiki/templates/yki-message-template', date: '2026-08-07' },
+  { slug: 'yki-message-writing-examples', category: 'essays', url: '/wiki/essays/yki-message-writing-examples', date: '2026-08-07' },
+  // 2026.8.08
+  { slug: 'finnish-message-phrases-yki', category: 'templates', url: '/wiki/templates/finnish-message-phrases-yki', date: '2026-08-08' },
+  // 2026.8.09
+  { slug: 'yki-message-writing-mistakes', category: 'guides', url: '/wiki/guides/yki-message-writing-mistakes', date: '2026-08-09' },
+  { slug: 'yki-message-writing-scoring', category: 'scoring', url: '/wiki/scoring/yki-message-writing-scoring', date: '2026-08-09' },
+  // 2026.8.10
+  { slug: 'yki-speaking-examples', category: 'essays', url: '/wiki/essays/yki-speaking-examples', date: '2026-08-10' },
+  { slug: 'yki-writing-task-3', category: 'guides', url: '/wiki/guides/yki-writing-task-3', date: '2026-08-10' },
+  // 2026.7.28
   { slug: 'how-to-write-an-opinion-text-in-finnish', category: 'guides', url: '/wiki/guides/how-to-write-an-opinion-text-in-finnish', date: '2026-07-28' },
   { slug: 'yki-opinion-essay-structure', category: 'guides', url: '/wiki/guides/yki-opinion-essay-structure', date: '2026-07-28' },
   { slug: 'yki-opinion-essay-templates', category: 'templates', url: '/wiki/templates/yki-opinion-essay-templates', date: '2026-07-29' },

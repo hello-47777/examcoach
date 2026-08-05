@@ -47,7 +47,9 @@ jobs:
       - name: Install tsx
         run: npm install -g tsx
 
-      - name: Run Bing IndexNow Push
-        run: npx tsx scripts/bing-push.ts
+      - name: Submit to Google & Bing
+        run: npx tsx scripts/submit-to-search-engines.ts
         env:
           BING_INDEXNOW_KEY: ${{ secrets.BING_INDEXNOW_KEY }}
+          GOOGLE_INDEXING_CLIENT_EMAIL: ${{ secrets.GOOGLE_INDEXING_CLIENT_EMAIL }}
+          GOOGLE_INDEXING_PRIVATE_KEY: ${{ secrets.GOOGLE_INDEXING_PRIVATE_KEY }}
