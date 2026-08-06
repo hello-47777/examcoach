@@ -22,7 +22,7 @@ jobs:
           body=$(echo "$response" | head -n -1)
           echo "HTTP Status: $http_code"
           echo "Response: $body"
-          if [ "$http_code" != "200" ]; then
+          if [ "$http_code" != "200" ] && [ "$http_code" != "201" ]; then
             echo "❌ Failed to trigger deploy"
             exit 1
           fi
@@ -44,11 +44,16 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install tsx
-        run: npm install -g tsx
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
 
       - name: Submit to Google & Bing
-        run: npx tsx scripts/submit-to-search-engines.ts
+        run: pnpm tsx scripts/submit-to-search-engines.ts
         env:
           BING_INDEXNOW_KEY: ${{ secrets.BING_INDEXNOW_KEY }}
           GOOGLE_INDEXING_CLIENT_EMAIL: ${{ secrets.GOOGLE_INDEXING_CLIENT_EMAIL }}
