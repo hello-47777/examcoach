@@ -22,6 +22,121 @@ export interface WikiArticle {
  * date 字段为发布日期 (北京时间)
  */
 export const scheduledArticles: WikiArticle[] = [
+  // 2026.8.17
+  {
+    slug: 'yki-writing-test-checklist',
+    category: 'guides',
+    url: '/wiki/guides/yki-writing-test-checklist',
+    date: '2026-08-17',
+    title: 'YKI Writing Test Checklist: Everything You Need Before Exam Day',
+    keywords: ['YKI writing test checklist', 'YKI test preparation', 'YKI exam tips', 'Finnish exam day', 'YKI writing test'],
+    topic: 'yki-writing-checklist',
+  },
+  // 2026.8.16
+  {
+    slug: 'how-long-to-prepare-for-yki-writing-test',
+    category: 'guides',
+    url: '/wiki/guides/how-long-to-prepare-for-yki-writing-test',
+    date: '2026-08-16',
+    title: 'How Long Does It Take to Prepare for YKI Writing Test?',
+    keywords: ['how long to prepare for YKI writing', 'YKI preparation time', 'YKI B1 writing preparation', 'YKI writing test', 'Finnish language exam'],
+    topic: 'yki-writing-preparation',
+  },
+  {
+    slug: 'yki-writing-preparation-plan',
+    category: 'guides',
+    url: '/wiki/guides/yki-writing-preparation-plan',
+    date: '2026-08-16',
+    title: 'YKI Writing Preparation Plan: 30-Day Study Schedule for B1-B2',
+    keywords: ['YKI writing preparation plan', 'YKI study schedule', 'YKI B1 writing preparation', 'Finnish exam preparation', 'YKI writing practice plan'],
+    topic: 'yki-writing-preparation',
+  },
+  // 2026.8.15
+  {
+    slug: 'finnish-language-test-citizenship',
+    category: 'guides',
+    url: '/wiki/guides/finnish-language-test-citizenship',
+    date: '2026-08-15',
+    title: 'Finnish Language Test for Citizenship: Complete YKI Guide',
+    keywords: ['Finnish language test citizenship', 'YKI citizenship requirement', 'Finnish citizenship exam', 'YKI test', 'Finnish citizenship language requirement'],
+    topic: 'yki-citizenship',
+  },
+  // 2026.8.14
+  {
+    slug: 'yki-exam-tips',
+    category: 'guides',
+    url: '/wiki/guides/yki-exam-tips',
+    date: '2026-08-14',
+    title: 'YKI Exam Tips: How to Prepare Efficiently',
+    keywords: ['YKI exam tips', 'YKI preparation', 'Finnish test strategy', 'YKI test', 'Finnish exam preparation'],
+    topic: 'yki-exam-tips',
+  },
+  {
+    slug: 'yki-level-3-vs-level-4',
+    category: 'scoring',
+    url: '/wiki/scoring/yki-level-3-vs-level-4',
+    date: '2026-08-14',
+    title: 'YKI Level 3 vs Level 4: What Score Do You Need?',
+    keywords: ['YKI level 3 vs level 4', 'YKI scoring', 'Finnish language levels', 'YKI keskitaso', 'YKI citizenship requirement'],
+    topic: 'yki-scoring-levels',
+  },
+  // 2026.8.13
+  {
+    slug: 'how-to-pass-yki-test',
+    category: 'guides',
+    url: '/wiki/guides/how-to-pass-yki-test',
+    date: '2026-08-13',
+    title: 'How to Pass YKI Test: Complete Intermediate Strategy Guide',
+    keywords: ['how to pass YKI test', 'YKI keskitaso preparation', 'Finnish exam tips', 'YKI test Finnish citizenship', 'YKI speaking templates'],
+    topic: 'yki-test-strategy',
+  },
+  {
+    slug: 'yki-test-preparation-plan',
+    category: 'guides',
+    url: '/wiki/guides/yki-test-preparation-plan',
+    date: '2026-08-13',
+    title: 'YKI Test Preparation Plan: 30 Day Study Schedule',
+    keywords: ['YKI test preparation plan', 'YKI study schedule', 'Finnish exam preparation', 'YKI keskitaso plan', 'how to study for YKI'],
+    topic: 'yki-preparation-plan',
+  },
+  // 2026.8.12
+  {
+    slug: 'yki-speaking-scoring',
+    category: 'scoring',
+    url: '/wiki/scoring/yki-speaking-scoring',
+    date: '2026-08-12',
+    title: 'How YKI Speaking is Scored: Examiner Criteria Explained',
+    keywords: ['YKI speaking scoring', 'YKI oral assessment', 'Finnish speaking evaluation', 'YKI test preparation'],
+    topic: 'speaking-scoring',
+  },
+  {
+    slug: 'yki-speaking-mistakes',
+    category: 'guides',
+    url: '/wiki/guides/yki-speaking-mistakes',
+    date: '2026-08-12',
+    title: 'Common YKI Speaking Mistakes and How to Improve',
+    keywords: ['YKI speaking mistakes', 'Finnish speaking errors', 'YKI speaking test', 'YKI preparation', 'common YKI mistakes'],
+    topic: 'speaking-mistakes',
+  },
+  // 2026.8.11
+  {
+    slug: 'finnish-speaking-phrases-yki',
+    category: 'templates',
+    url: '/wiki/templates/finnish-speaking-phrases-yki',
+    date: '2026-08-11',
+    title: 'Finnish Speaking Phrases for YKI Test',
+    keywords: ['Finnish speaking phrases YKI', 'YKI vocabulary', 'Finnish conversation phrases', 'YKI speaking test', 'Finnish exam phrases'],
+    topic: 'speaking-phrases',
+  },
+  {
+    slug: 'yki-speaking-templates',
+    category: 'templates',
+    url: '/wiki/templates/yki-speaking-templates',
+    date: '2026-08-11',
+    title: 'YKI Speaking Templates: Useful Finnish Speaking Structures',
+    keywords: ['YKI speaking templates', 'Finnish speaking phrases', 'YKI speaking answers', 'YKI speaking test', 'Finnish speaking structures'],
+    topic: 'speaking-templates',
+  },
   // 2026.8.04
   {
     slug: 'ai-yki-writing-preparation',
