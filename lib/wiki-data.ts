@@ -22,6 +22,92 @@ export interface WikiArticle {
  * date 字段为发布日期 (北京时间)
  */
 export const scheduledArticles: WikiArticle[] = [
+  // 2026.8.24
+  {
+    slug: 'free-yki-writing-checker',
+    category: 'guides',
+    url: '/wiki/guides/free-yki-writing-checker',
+    date: '2026-08-24',
+    title: 'Free YKI Writing Checker Online With AI Feedback',
+    keywords: ['free YKI writing checker', 'YKI AI checker', 'Finnish writing correction', 'YKI writing check', 'free Finnish writing checker'],
+    topic: 'yki-writing-checker',
+  },
+  {
+    slug: 'ai-finnish-writing-tutor',
+    category: 'guides',
+    url: '/wiki/guides/ai-finnish-writing-tutor',
+    date: '2026-08-24',
+    title: 'How to Use AI to Improve Finnish Writing Before YKI Exam',
+    keywords: ['AI Finnish writing tutor', 'Finnish AI correction', 'YKI preparation AI', 'AI writing tutor', 'Finnish writing AI'],
+    topic: 'ai-writing-tutor',
+  },
+  // 2026.8.23
+  {
+    slug: 'yki-writing-answer-template',
+    category: 'templates',
+    url: '/wiki/templates/yki-writing-answer-template',
+    date: '2026-08-23',
+    title: 'YKI Writing Answer Template: Structure Every Task',
+    keywords: ['YKI writing answer template', 'YKI exam template', 'Finnish writing framework', 'YKI writing structure', 'YKI message format'],
+    topic: 'yki-writing-template',
+  },
+  {
+    slug: 'most-common-finnish-words-for-yki-writing-test',
+    category: 'templates',
+    url: '/wiki/templates/most-common-finnish-words-for-yki-writing-test',
+    date: '2026-08-23',
+    title: 'Most Common Finnish Words for YKI Writing Test',
+    keywords: ['Finnish words for YKI writing', 'YKI vocabulary list', 'Finnish writing vocabulary', 'YKI connectors', 'essential Finnish words'],
+    topic: 'yki-vocabulary',
+  },
+  // 2026.8.22
+  {
+    slug: 'yki-writing-topics',
+    category: 'guides',
+    url: '/wiki/guides/yki-writing-topics',
+    date: '2026-08-22',
+    title: 'YKI Writing Topics: Common Exam Themes and Questions',
+    keywords: ['YKI writing topics', 'YKI exam questions', 'Finnish writing themes', 'YKI test topics', 'common YKI writing tasks'],
+    topic: 'yki-writing-topics',
+  },
+  {
+    slug: 'yki-writing-practice',
+    category: 'guides',
+    url: '/wiki/guides/yki-writing-practice',
+    date: '2026-08-22',
+    title: 'YKI Writing Practice: How to Train With Real Exam Topics',
+    keywords: ['YKI writing practice', 'Finnish writing exercises', 'YKI practice topics', 'YKI exam preparation', 'Finnish writing training'],
+    topic: 'yki-writing-practice',
+  },
+  // 2026.8.21
+  {
+    slug: 'yki-writing-level-4-examples',
+    category: 'essays',
+    url: '/wiki/essays/yki-writing-level-4-examples',
+    date: '2026-08-21',
+    title: 'YKI Writing Level 4 Examples: High Score Finnish Answers',
+    keywords: ['YKI writing level 4 examples', 'B2 Finnish writing sample', 'YKI advanced writing', 'YKI level 4', 'Finnish exam examples'],
+    topic: 'yki-writing-level-4',
+  },
+  // 2026.8.20
+  {
+    slug: 'pass-yki-writing-level-3',
+    category: 'guides',
+    url: '/wiki/guides/pass-yki-writing-level-3',
+    date: '2026-08-20',
+    title: 'How to Pass YKI Writing Level 3: Complete B1 Strategy',
+    keywords: ['pass YKI writing level 3', 'YKI passing score', 'YKI B1 writing', 'Finnish B1 exam', 'YKI writing strategy'],
+    topic: 'yki-writing-level-3',
+  },
+  {
+    slug: 'how-to-get-yki-writing-level-4',
+    category: 'guides',
+    url: '/wiki/guides/how-to-get-yki-writing-level-4',
+    date: '2026-08-20',
+    title: 'How to Get YKI Writing Level 4: Move From B1 to B2',
+    keywords: ['how to get YKI writing level 4', 'YKI B2 writing', 'Finnish advanced writing', 'YKI level 4', 'B1 to B2 Finnish'],
+    topic: 'yki-writing-level-4',
+  },
   // 2026.8.17
   {
     slug: 'yki-writing-test-checklist',
