@@ -1,14 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
+export const metadata = generateWikiMetadata('guides', 'yki-writing-test-checklist', {
   title: 'YKI Writing Test Checklist: Everything You Need Before Exam Day',
   description: 'Master your YKI test preparation with our definitive YKI writing test checklist. Learn essential exam tips, examiner criteria, and reusable templates before the Finnish exam day.',
-  keywords: ['YKI writing test checklist', 'YKI test preparation', 'YKI exam tips', 'Finnish exam day', 'YKI writing test'],
-  alternates: {
-    canonical: '/wiki/guides/yki-writing-test-checklist',
-  },
-};
+});
 
 export default function YkiWritingTestChecklistPage() {
   const faqSchema = {

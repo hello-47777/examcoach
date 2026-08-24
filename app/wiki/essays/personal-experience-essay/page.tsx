@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("essays", "personal-experience-essay", {
   title: "YKI Writing: Personal Experience Essay Guide & B1 Examples",
   description: "Learn how to write a compelling personal experience essay (oma kokemus) for the Finnish YKI exam. Master past tenses, text structure, and B1 vocabulary.",
-};
+});
 
 export default function YkiPersonalExperienceEssayPage() {
   return (

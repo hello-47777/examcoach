@@ -1,13 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
+export const metadata = generateWikiMetadata('guides', 'ai-yki-writing-checker', {
   title: 'AI YKI Writing Checker: Check Your Finnish Writing Level Instantly',
   description: 'Use our AI YKI writing checker for instant Finnish writing evaluation. Get accurate AI Finnish correction and test your YKI exam readiness today.',
-  alternates: {
-    canonical: '/wiki/guides/ai-yki-writing-checker',
-  },
-};
+});
 
 export default function AiYkiWritingCheckerPage() {
   const faqSchema = {
@@ -138,6 +136,7 @@ export default function AiYkiWritingCheckerPage() {
             <ul className="space-y-2">
               <li><Link href="/wiki/guides/how-to-improve-finnish-writing-skills-yki-test" className="text-blue-700 hover:underline">How to Improve Finnish Writing Skills for YKI Test</Link></li>
               <li><Link href="/wiki/guides/common-finnish-writing-errors-yki-students" className="text-blue-700 hover:underline">Common Finnish Writing Errors YKI Students Should Avoid</Link></li>
+              <li><Link href="/wiki/guides/yki-writing-feedback-guide" className="text-blue-700 hover:underline">YKI Writing Feedback Guide: Understand Your AI Examiner Report</Link></li>
             </ul>
           </nav>
 

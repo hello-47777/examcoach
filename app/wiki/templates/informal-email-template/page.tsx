@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "The Ultimate YKI Informal Email Template (Copy & Paste) | Pass Finnish",
-  description: "Master the writing section with this YKI informal email template. Grab our fill-in-the-blank Finnish email template for B1-B2 level Finnish writing reference and YKI test preparation."
-};
+export const metadata = generateWikiMetadata('templates', 'informal-email-template', {
+  title: 'YKI Writing: The Ultimate YKI Informal Email Template (Copy & Paste) | Pass Finnish',
+  description: 'Master the writing section with this YKI informal email template. Grab our fill-in-the-blank Finnish email template for B1-B2 level Finnish writing reference and YKI test preparation.',
+});
 
 export default function Page() {
   return (

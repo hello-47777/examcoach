@@ -9,19 +9,12 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'Finnish Opinion Writing Phrases for YKI Exam Success',
+export const metadata = generateWikiMetadata('templates', 'finnish-opinion-writing-phrases', {
+  title: 'YKI Writing: Finnish Opinion Writing Phrases for YKI Exam Success',
   description: 'Boost your YKI test score with this comprehensive phrase bank of Finnish opinion writing phrases. Master the essential opinion essay connectors and vocabulary.',
-  alternates: {
-    canonical: '/wiki/templates/finnish-opinion-writing-phrases',
-  },
-  openGraph: {
-    title: 'Finnish Opinion Writing Phrases for YKI Exam Success',
-    description: 'Boost your YKI test score with this comprehensive phrase bank of Finnish opinion writing phrases. Master the essential opinion essay connectors and vocabulary.',
-    type: 'article',
-  }
-};
+});
 
 export default function FinnishOpinionWritingPhrases() {
   const faqSchema = {
@@ -237,6 +230,7 @@ export default function FinnishOpinionWritingPhrases() {
           <ul className="space-y-2">
             <li><Link href="/wiki/templates/yki-opinion-essay-templates" className="text-blue-700 hover:underline">YKI Opinion Essay Templates: Finnish Writing Frameworks for B1-B2</Link></li>
             <li><Link href="/wiki/guides/yki-opinion-essay-structure" className="text-blue-700 hover:underline">YKI Opinion Essay Structure: B1-B2 Writing Framework Explained</Link></li>
+            <li><Link href="/wiki/essays/yki-opinion-writing-examples" className="text-blue-700 hover:underline">YKI Opinion Writing Examples: Finnish B1-B2 Sample Essays</Link></li>
           </ul>
         </nav>
 

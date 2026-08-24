@@ -1,19 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
+export const metadata = generateWikiMetadata('guides', 'free-yki-writing-checker', {
   title: 'Free YKI Writing Checker Online With AI Feedback',
   description: 'Improve your Finnish with our free YKI writing checker. Get instant AI feedback and accurate Finnish writing correction tailored to YKI exam criteria.',
-  alternates: {
-    canonical: '/wiki/guides/free-yki-writing-checker',
-  },
-  keywords: ['free YKI writing checker', 'YKI AI checker', 'Finnish writing correction', 'YKI writing check', 'free Finnish writing checker'],
-  openGraph: {
-    title: 'Free YKI Writing Checker Online With AI Feedback',
-    description: 'Improve your Finnish with our free YKI writing checker. Get instant AI feedback and accurate Finnish writing correction tailored to YKI exam criteria.',
-    type: 'article',
-  }
-};
+});
 
 export default function FreeYKIWritingCheckerPage() {
   const faqSchema = {

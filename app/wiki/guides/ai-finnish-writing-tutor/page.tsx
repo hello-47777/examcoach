@@ -1,19 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'How to Use AI to Improve Finnish Writing Before YKI Exam',
+export const metadata = generateWikiMetadata('guides', 'ai-finnish-writing-tutor', {
+  title: 'How to Use AI to Improve Finnish Writing Before YKI Writing Exam',
   description: 'Learn how to use an AI Finnish writing tutor to prepare for the YKI exam. Get step-by-step guidance on Finnish AI correction, scoring, and writing templates.',
-  alternates: {
-    canonical: '/wiki/guides/ai-finnish-writing-tutor',
-  },
-  keywords: ['AI Finnish writing tutor', 'Finnish AI correction', 'YKI preparation AI', 'AI writing tutor', 'Finnish writing AI'],
-  openGraph: {
-    title: 'How to Use AI to Improve Finnish Writing Before YKI Exam',
-    description: 'Learn how to use an AI Finnish writing tutor to prepare for the YKI exam. Get step-by-step guidance on Finnish AI correction, scoring, and writing templates.',
-    type: 'article',
-  }
-};
+});
 
 export default function AIFinnishWritingTutorPage() {
   const faqSchema = {

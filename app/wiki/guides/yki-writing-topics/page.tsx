@@ -1,19 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
+export const metadata = generateWikiMetadata('guides', 'yki-writing-topics', {
   title: 'YKI Writing Topics: Common Exam Themes and Questions | ExamCoach.ai',
   description: 'Explore the most common YKI writing topics and exam themes. Review realistic YKI exam questions and detailed examples to prepare for your Finnish intermediate test.',
-  keywords: ['YKI writing topics', 'YKI exam questions', 'Finnish writing themes', 'YKI test topics', 'common YKI writing tasks'],
-  alternates: {
-    canonical: '/wiki/guides/yki-writing-topics',
-  },
-  openGraph: {
-    title: 'YKI Writing Topics: Common Exam Themes and Questions',
-    description: 'Explore the most common YKI writing topics and exam themes. Review realistic YKI exam questions and examples.',
-    type: 'article',
-  },
-};
+});
 
 export default function YkiWritingTopicsPage() {
   const faqSchema = {

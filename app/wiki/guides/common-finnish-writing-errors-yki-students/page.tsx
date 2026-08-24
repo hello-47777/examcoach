@@ -1,13 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'Common Finnish Writing Errors YKI Students Should Avoid',
+export const metadata = generateWikiMetadata('guides', 'common-finnish-writing-errors-yki-students', {
+  title: 'Common Finnish Writing Errors YKI Writing Students Should Avoid',
   description: 'Avoid common Finnish writing errors and boost your YKI exam score. Learn to fix Finnish grammar mistakes, structural issues, and frequent YKI writing mistakes.',
-  alternates: {
-    canonical: '/wiki/guides/common-finnish-writing-errors-yki-students',
-  },
-};
+});
 
 export default function CommonFinnishWritingErrors() {
   const faqSchema = {

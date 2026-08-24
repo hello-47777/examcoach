@@ -1,14 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'YKI Message Writing Guide: How to Write Short Messages in Finnish',
+export const metadata = generateWikiMetadata('guides', 'yki-message-writing-guide', {
+  title: 'YKI Writing Message Guide: How to Write Short Messages in Finnish',
   description: 'Master the YKI message writing task. Learn step-by-step frameworks, essential Finnish phrases, and how examiners score your short messages in the YKI test.',
-  alternates: {
-    canonical: '/wiki/guides/yki-message-writing-guide',
-  },
-};
+});
 
 export default function YkiMessageWritingGuide() {
   const faqSchema = {

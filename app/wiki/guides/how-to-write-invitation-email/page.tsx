@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "How to Write an Invitation Email for the YKI Test",
-  description: "Learn how to write invitation email YKI tasks successfully. Discover the perfect formatting, greeting structures, and time management tricks.",
-};
+export const metadata = generateWikiMetadata('guides', 'how-to-write-invitation-email', {
+  title: 'How to Write an Invitation Email for the YKI Writing Test',
+  description: 'Learn how to write invitation email YKI tasks successfully. Discover the perfect formatting, greeting structures, and time management tricks.',
+});
 
 export default function Page() {
   return (

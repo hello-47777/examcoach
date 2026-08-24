@@ -123,6 +123,33 @@ export default function WikiIndexPage() {
           </div>
         </section>
 
+        {/* Browse by Topic */}
+        <section className="mx-auto max-w-5xl px-6 pb-16">
+          <h2 className="text-2xl font-bold text-gray-900">Browse by Topic</h2>
+          <p className="mt-2 text-sm text-gray-600">
+            Structured learning paths for each YKI writing skill area.
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { href: '/topics/yki-email-writing', label: 'Email & Message Writing', desc: 'Task 1: viesti & sähköposti' },
+              { href: '/topics/yki-opinion-writing', label: 'Opinion Writing', desc: 'Task 2: mielipidekirjoitus' },
+              { href: '/topics/yki-vocabulary', label: 'Writing Vocabulary', desc: 'B1–B2 word lists & connectors' },
+              { href: '/topics/yki-ai-writing', label: 'AI Writing Preparation', desc: 'Check your level with AI' },
+              { href: '/topics/yki-writing-errors', label: 'Common Writing Errors', desc: 'Fix mistakes that lower scores' },
+              { href: '/topics/yki-writing-skills', label: 'Improve Writing Skills', desc: 'Strategies & daily habits' },
+            ].map((topic) => (
+              <Link
+                key={topic.href}
+                href={topic.href}
+                className="block rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-all hover:border-blue-200 hover:shadow-md"
+              >
+                <h3 className="text-base font-semibold text-gray-900">{topic.label}</h3>
+                <p className="mt-1 text-xs text-gray-500">{topic.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="mx-auto max-w-5xl px-6 pb-16">
           <div className="rounded-2xl bg-gradient-to-r from-blue-600 to-teal-500 p-8 text-center text-white shadow-xl">

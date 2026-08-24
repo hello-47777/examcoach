@@ -1,13 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'YKI B1 Vocabulary List: Essential Finnish Words for Writing Test',
+export const metadata = generateWikiMetadata('templates', 'yki-b1-vocabulary-list-writing-test', {
+  title: 'YKI Writing B1 Vocabulary List: Essential Finnish Words for Writing Test',
   description: 'Master the YKI B1 vocabulary list to pass your Finnish writing exam. Learn essential Finnish exam words, YKI writing vocabulary, and B1 phrases with practical examples.',
-  alternates: {
-    canonical: '/wiki/templates/yki-b1-vocabulary-list-writing-test',
-  },
-};
+});
 
 export default function YkiB1VocabularyListWritingTest() {
   const faqSchema = {

@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "YKI Writing Invitation Scoring: How to Get a Passing Grade",
-  description: "Demystify the YKI writing invitation scoring system. Learn how examiners grade tasks and discover the key strategies to pass YKI intermediate writing.",
-};
+export const metadata = generateWikiMetadata('scoring', 'invitation-email-scoring', {
+  title: 'YKI Writing Invitation Scoring: How to Get a Passing Grade',
+  description: 'Demystify the YKI writing invitation scoring system. Learn how examiners grade tasks and discover the key strategies to pass YKI intermediate writing.',
+});
 
 export default function Page() {
   return (

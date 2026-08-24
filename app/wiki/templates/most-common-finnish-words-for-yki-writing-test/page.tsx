@@ -1,15 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
+export const metadata = generateWikiMetadata('templates', 'most-common-finnish-words-for-yki-writing-test', {
   title: 'Most Common Finnish Words for YKI Writing Test | ExamCoach.ai',
   description: 'Boost your exam score with the most essential Finnish words for YKI writing. Learn categorized vocabulary, connectors, and phrases for every YKI test task.',
-  keywords: ['Finnish words for YKI writing', 'YKI vocabulary list', 'Finnish writing vocabulary', 'YKI connectors', 'essential Finnish words'],
-  alternates: {
-    canonical: '/wiki/templates/most-common-finnish-words-for-yki-writing-test',
-  },
-};
+});
 
 export default function MostCommonFinnishWordsYkiWriting() {
   const faqSchema = {

@@ -1,19 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
+export const metadata = generateWikiMetadata('guides', 'yki-writing-practice', {
   title: 'YKI Writing Practice: How to Train With Real Exam Topics | ExamCoach.ai',
   description: 'Master the Finnish language test with targeted YKI writing practice. Learn examiner scoring criteria, vocabulary frameworks, and step-by-step methods using real YKI practice topics.',
-  keywords: ['YKI writing practice', 'Finnish writing exercises', 'YKI practice topics', 'YKI exam preparation', 'Finnish writing training'],
-  alternates: {
-    canonical: '/wiki/guides/yki-writing-practice',
-  },
-  openGraph: {
-    title: 'YKI Writing Practice: How to Train With Real Exam Topics',
-    description: 'Master the Finnish language test with targeted YKI writing practice. Learn examiner scoring criteria, vocabulary frameworks, and step-by-step methods.',
-    type: 'article',
-  },
-};
+});
 
 export default function YkiWritingPracticePage() {
   const faqSchema = {

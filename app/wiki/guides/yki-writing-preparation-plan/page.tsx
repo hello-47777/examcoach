@@ -1,14 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
+export const metadata = generateWikiMetadata('guides', 'yki-writing-preparation-plan', {
   title: 'YKI Writing Preparation Plan: 30-Day Study Schedule for B1-B2',
   description: 'Master the Finnish language exam with our structured YKI writing preparation plan. Follow this 30-day YKI study schedule to achieve your B1-B2 certificate.',
-  keywords: ['YKI writing preparation plan', 'YKI study schedule', 'YKI B1 writing preparation', 'Finnish exam preparation', 'YKI writing practice plan'],
-  alternates: {
-    canonical: '/wiki/guides/yki-writing-preparation-plan',
-  },
-};
+});
 
 export default function YkiWritingPreparationPlan() {
   const faqSchema = {

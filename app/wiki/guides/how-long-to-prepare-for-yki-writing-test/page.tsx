@@ -1,14 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
+export const metadata = generateWikiMetadata('guides', 'how-long-to-prepare-for-yki-writing-test', {
   title: 'How Long Does It Take to Prepare for YKI Writing Test?',
   description: 'Find out exactly how long to prepare for YKI writing, how to create a realistic study schedule, and what is needed for YKI B1 writing preparation.',
-  keywords: ['how long to prepare for YKI writing', 'YKI preparation time', 'YKI B1 writing preparation', 'YKI writing test', 'Finnish language exam'],
-  alternates: {
-    canonical: '/wiki/guides/how-long-to-prepare-for-yki-writing-test',
-  },
-};
+});
 
 export default function YkiWritingPrepTimePage() {
   const faqSchema = {

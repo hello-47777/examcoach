@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("emails", "formal-email", {
   title: "YKI Writing: Formal Email Guide & B1 Examples",
   description: "Learn how to write a flawless formal email to Finnish authorities or businesses for the YKI exam. Step-by-step formatting, B1 examples, and key vocabulary.",
-};
+});
 
 export default function YkiFormalEmailPage() {
   return (

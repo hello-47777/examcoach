@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("emails", "immigration-letter", {
   title: "YKI Writing: Immigration Letter Guide & B1 Examples",
   description: "Learn how to write a formal letter to the Finnish Immigration Service (Migri) for the YKI exam. Master formal vocabulary, request structures, and B1 formatting.",
-};
+});
 
 export default function YkiImmigrationLetterPage() {
   return (

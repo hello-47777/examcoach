@@ -1,14 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'Finnish Speaking Phrases for YKI Test | ExamCoach.ai',
+export const metadata = generateWikiMetadata('templates', 'finnish-speaking-phrases-yki', {
+  title: 'YKI Writing: Finnish Speaking Phrases for YKI Test | ExamCoach.ai',
   description: 'Master essential Finnish speaking phrases YKI to boost your oral exam score. Discover categorized YKI vocabulary and conversational phrases.',
-  alternates: {
-    canonical: '/wiki/templates/finnish-speaking-phrases-yki',
-  },
-  keywords: ['Finnish speaking phrases YKI', 'YKI vocabulary', 'Finnish conversation phrases', 'YKI speaking test', 'Finnish exam phrases'],
-};
+});
 
 export default function FinnishSpeakingPhrasesYkiPage() {
   const faqSchema = {

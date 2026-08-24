@@ -1,14 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'YKI Exam Tips: How to Prepare Efficiently | ExamCoach.ai',
+export const metadata = generateWikiMetadata('guides', 'yki-exam-tips', {
+  title: 'YKI Writing Exam Tips: How to Prepare Efficiently | ExamCoach.ai',
   description: 'Master the Finnish intermediate language test with these proven YKI exam tips. Learn efficient YKI preparation techniques and a winning Finnish test strategy.',
-  keywords: ['YKI exam tips', 'YKI preparation', 'Finnish test strategy', 'YKI test', 'Finnish exam preparation'],
-  alternates: {
-    canonical: '/wiki/guides/yki-exam-tips',
-  },
-};
+});
 
 export default function YkiExamTipsPage() {
   const faqSchema = {

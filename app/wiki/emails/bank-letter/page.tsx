@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("emails", "bank-letter", {
   title: "YKI Writing: Bank Letter Guide & B1 Examples",
   description: "Learn how to write a formal letter or email to a bank (pankki) for the Finnish YKI exam. Master financial vocabulary, mortgage requests, and B1 formatting.",
-};
+});
 
 export default function YkiBankLetterPage() {
   return (

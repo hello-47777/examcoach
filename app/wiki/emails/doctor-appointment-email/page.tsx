@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("emails", "doctor-appointment-email", {
   title: "YKI Writing: Doctor Appointment Message Guide & B1 Examples",
   description: "Learn how to write a message to book a doctor's appointment (lääkärinaika) for the Finnish YKI exam. Master symptom vocabulary and B1 formal structures.",
-};
+});
 
 export default function YkiDoctorAppointmentEmailPage() {
   return (

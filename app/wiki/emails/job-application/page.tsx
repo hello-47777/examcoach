@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("emails", "job-application", {
   title: "YKI Writing: Job Application Letter Guide & Examples",
   description: "Master the job application letter for the Finnish YKI exam. Learn the correct structure, avoid common mistakes, and study a perfect B1-level example.",
-};
+});
 
 export default function YkiJobApplicationPage() {
   return (

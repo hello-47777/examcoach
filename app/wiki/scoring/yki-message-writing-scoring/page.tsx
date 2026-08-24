@@ -1,18 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'YKI Message Writing Scoring: How Examiners Evaluate Messages',
+export const metadata = generateWikiMetadata('scoring', 'yki-message-writing-scoring', {
+  title: 'YKI Writing: Message Writing Scoring: How Examiners Evaluate Messages',
   description: 'Understand the YKI message writing scoring system. Learn the exact YKI grading criteria examiners use and how to achieve a passing Finnish writing score.',
-  alternates: {
-    canonical: '/wiki/scoring/yki-message-writing-scoring',
-  },
-  openGraph: {
-    title: 'YKI Message Writing Scoring: How Examiners Evaluate Messages',
-    description: 'Understand the YKI message writing scoring system. Learn the exact YKI grading criteria examiners use and how to achieve a passing Finnish writing score.',
-    type: 'article',
-  }
-};
+});
 
 export default function YkiMessageWritingScoringPage() {
   const faqSchema = {
@@ -151,6 +144,7 @@ export default function YkiMessageWritingScoringPage() {
           <ul className="space-y-2">
             <li><Link href="/wiki/guides/yki-message-writing-mistakes" className="text-blue-700 hover:underline">Common YKI Message Writing Mistakes Students Make</Link></li>
             <li><Link href="/wiki/scoring/yki-opinion-writing-scoring" className="text-blue-700 hover:underline">YKI Opinion Writing Scoring: How Examiners Grade Your Essay</Link></li>
+            <li><Link href="/wiki/guides/yki-message-writing-guide" className="text-blue-700 hover:underline">YKI Message Writing Guide: How to Write Short Messages in Finnish</Link></li>
           </ul>
         </nav>
 

@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("emails", "rental-complaint-letter", {
   title: "YKI Writing: Rental Complaint Letter Guide & B1 Examples",
   description: "Learn how to write a formal rental complaint letter (valitus tai vikailmoitus) for the Finnish YKI exam. Master polite complaints, maintenance vocabulary, and B1 formatting.",
-};
+});
 
 export default function YkiRentalComplaintLetterPage() {
   return (

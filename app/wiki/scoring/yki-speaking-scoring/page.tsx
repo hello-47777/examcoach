@@ -1,14 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'How YKI Speaking is Scored: Examiner Criteria Explained | ExamCoach.ai',
+export const metadata = generateWikiMetadata('scoring', 'yki-speaking-scoring', {
+  title: 'YKI Writing: How YKI Speaking is Scored: Examiner Criteria Explained | ExamCoach.ai',
   description: 'Understand the YKI speaking scoring system, learn what examiners look for during the YKI oral assessment, and improve your Finnish speaking evaluation.',
-  alternates: {
-    canonical: '/wiki/scoring/yki-speaking-scoring',
-  },
-  keywords: ['YKI speaking scoring', 'YKI oral assessment', 'Finnish speaking evaluation', 'YKI test preparation'],
-};
+});
 
 export default function YKISpeakingScoringPage() {
   const faqSchema = {

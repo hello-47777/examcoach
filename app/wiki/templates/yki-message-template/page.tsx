@@ -1,18 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'YKI Message Template: Finnish Short Message Structures for Exam',
+export const metadata = generateWikiMetadata('templates', 'yki-message-template', {
+  title: 'YKI Writing Message Template: Finnish Short Message Structures for Exam',
   description: 'Master the YKI Finnish exam writing section with our reusable YKI message templates. Learn the proper Finnish message format, structure, and phrases to pass.',
-  alternates: {
-    canonical: '/wiki/templates/yki-message-template',
-  },
-  openGraph: {
-    title: 'YKI Message Template: Finnish Short Message Structures for Exam',
-    description: 'Master the YKI Finnish exam writing section with our reusable YKI message templates.',
-    type: 'article',
-  },
-};
+});
 
 export default function YkiMessageTemplatePage() {
   const faqSchema = {

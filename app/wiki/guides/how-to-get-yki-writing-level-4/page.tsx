@@ -1,16 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: "How to Get YKI Writing Level 4: Move From B1 to B2",
-  description:
-    "Discover a step-by-step guide on how to achieve a YKI writing level 4. Learn how to elevate your Finnish from B1 to B2 with advanced grammar and vocabulary.",
-  keywords: ['how to get YKI writing level 4', 'YKI B2 writing', 'Finnish advanced writing', 'YKI level 4', 'B1 to B2 Finnish'],
-  alternates: {
-    canonical: '/wiki/guides/how-to-get-yki-writing-level-4',
-  },
-};
+export const metadata = generateWikiMetadata('guides', 'how-to-get-yki-writing-level-4', {
+  title: 'How to Get YKI Writing Level 4: Move From B1 to B2',
+  description: 'Discover a step-by-step guide on how to achieve a YKI writing level 4. Learn how to elevate your Finnish from B1 to B2 with advanced grammar and vocabulary.',
+});
 
 export default function YkiWritingLevel4Page() {
   const faqSchema = {

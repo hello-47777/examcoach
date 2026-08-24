@@ -1,13 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'Finnish Writing Transition Words for YKI Exam',
+export const metadata = generateWikiMetadata('templates', 'finnish-writing-transition-words-yki-exam', {
+  title: 'YKI Writing: Finnish Writing Transition Words for YKI Exam',
   description: 'Boost your YKI exam score by mastering Finnish writing transition words. Learn essential Finnish linking phrases and YKI essay vocabulary to improve your text cohesion.',
-  alternates: {
-    canonical: '/wiki/templates/finnish-writing-transition-words-yki-exam',
-  },
-};
+});
 
 export default function FinnishWritingTransitionWords() {
   const faqSchema = {
@@ -159,6 +157,7 @@ export default function FinnishWritingTransitionWords() {
             <ul className="space-y-2">
               <li><Link href="/wiki/templates/finnish-connectors-for-writing" className="text-blue-700 hover:underline">Finnish Connectors for Writing: Improve Your YKI Essay Flow</Link></li>
               <li><Link href="/wiki/templates/finnish-opinion-writing-phrases" className="text-blue-700 hover:underline">Finnish Opinion Writing Phrases for YKI Exam Success</Link></li>
+              <li><Link href="/wiki/templates/yki-b1-vocabulary-list-writing-test" className="text-blue-700 hover:underline">YKI B1 Vocabulary List: Essential Finnish Words for the Writing Test</Link></li>
             </ul>
           </nav>
 

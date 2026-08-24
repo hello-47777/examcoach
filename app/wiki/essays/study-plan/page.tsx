@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("essays", "study-plan", {
   title: "YKI Writing: Study Plan Guide & B1 Examples",
   description: "Learn how to write a clear and structured study plan (opintosuunnitelma) for the Finnish YKI exam. Master future intentions, education vocabulary, and B1 formatting.",
-};
+});
 
 export default function YkiStudyPlanPage() {
   return (

@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("emails", "complaint-letter", {
   title: "YKI Writing: Complaint Letter Guide & Examples",
   description: "Learn how to write an effective complaint letter for the Finnish YKI exam. Structure, key phrases, and a B1-level example to help you score higher.",
-};
+});
 
 export default function YkiComplaintLetterPage() {
   return (

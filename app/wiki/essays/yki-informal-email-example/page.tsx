@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
-  title: "YKI Test Informal Email Example (With Finnish Translations) | Pass Finnish",
-  description: "Master the YKI keskitaso writing task 1 with a full YKI informal email example. Includes Finnish sample, English translations, and examiner breakdown for B1-B2 level."
-};
+export const metadata = generateWikiMetadata("essays", "yki-informal-email-example", {
+  title: "YKI Writing: Test Informal Email Example (With Finnish Translations) | Pass Finnish",
+  description: "Master the YKI keskitaso writing task 1 with a full YKI informal email example. Includes Finnish sample, English translations, and examiner breakdown for B1-B2 level.",
+});
 
 export default function Page() {
   return (

@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "Essential Informal Finnish Email Phrases for the YKI Test | Pass Finnish",
-  description: "Boost your YKI vocabulary with our swipe file of essential informal Finnish email phrases for B1-B2 level Finnish writing reference. Master casual Finnish greetings, check-ins, and sign-offs."
-};
+export const metadata = generateWikiMetadata('templates', 'informal-email-phrases', {
+  title: 'YKI Writing: Essential Informal Finnish Email Phrases for the YKI Test | Pass Finnish',
+  description: 'Boost your YKI vocabulary with our swipe file of essential informal Finnish email phrases for B1-B2 level Finnish writing reference. Master casual Finnish greetings, check-ins, and sign-offs.',
+});
 
 export default function Page() {
   return (

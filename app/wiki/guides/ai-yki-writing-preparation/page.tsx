@@ -1,13 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
+export const metadata = generateWikiMetadata('guides', 'ai-yki-writing-preparation', {
   title: 'How AI Can Help You Prepare for the YKI Writing Test | AI YKI Writing Preparation',
   description: 'Master the Finnish YKI exam with targeted AI YKI writing preparation. Learn how to use an AI Finnish tutor for instant Finnish writing feedback and effective YKI writing practice.',
-  alternates: {
-    canonical: '/wiki/guides/ai-yki-writing-preparation',
-  },
-};
+});
 
 export default function AIYKIWritingPreparationPage() {
   const faqSchema = {
@@ -198,6 +196,15 @@ export default function AIYKIWritingPreparationPage() {
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
             Stop guessing your proficiency level. Get instant, accurate Finnish writing feedback tailored to the official YKI grading criteria today.
           </p>
+          {/* Internal Links - Related Articles */}
+          <nav className="bg-slate-50 border border-slate-200 rounded-lg p-6 mb-8 not-prose">
+            <h2 className="text-xl font-bold text-slate-900 mb-3">Related Articles</h2>
+            <ul className="space-y-2">
+              <li><Link href="/wiki/guides/ai-yki-writing-checker" className="text-blue-700 hover:underline">AI YKI Writing Checker: Check Your Finnish Writing Level Instantly</Link></li>
+            </ul>
+          </nav>
+
+          {/* CTA Section */}
           <Link 
             href="/" 
             className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"

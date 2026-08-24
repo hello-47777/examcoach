@@ -1,27 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'How to Pass YKI Intermediate Test: Complete Strategy Guide',
-  description:
-    'Master the Finnish YKI keskitaso exam with our comprehensive guide. Learn examiner criteria, sub-test strategies, reusable writing frameworks, and essential Finnish exam tips.',
-  keywords: [
-    'how to pass YKI test',
-    'YKI keskitaso preparation',
-    'Finnish exam tips',
-    'YKI test Finnish citizenship',
-    'YKI speaking templates',
-  ],
-  alternates: {
-    canonical: '/wiki/guides/how-to-pass-yki-test',
-  },
-  openGraph: {
-    title: 'How to Pass YKI Intermediate Test: Complete Strategy Guide',
-    description:
-      'Step-by-step strategy to pass the intermediate YKI Finnish exam (keskitaso). Includes templates, vocabulary, examiner criteria, and mistake corrections.',
-    type: 'article',
-  },
-};
+export const metadata = generateWikiMetadata('guides', 'how-to-pass-yki-test', {
+  title: 'How to Pass YKI Writing Intermediate Test: Complete Strategy Guide',
+  description: 'Master the Finnish YKI keskitaso exam with our comprehensive guide. Learn examiner criteria, sub-test strategies, reusable writing frameworks, and essential Finnish exam tips.',
+});
 
 export default function YkiGuidePage() {
   const faqSchema = {

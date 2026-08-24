@@ -1,14 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'YKI Message Writing Examples: Finnish Sample Answers Explained',
+export const metadata = generateWikiMetadata('essays', 'yki-message-writing-examples', {
+  title: 'YKI Writing Message Examples: Finnish Sample Answers Explained',
   description: 'Review realistic YKI message writing examples to prepare for your Finnish test. Learn why these sample answers score high and how to apply them to your exam.',
-  alternates: {
-    canonical: '/wiki/essays/yki-message-writing-examples',
-  },
-};
+});
 
 export default function YkiMessageWritingExamplesPage() {
   const faqSchema = {
@@ -297,6 +295,7 @@ export default function YkiMessageWritingExamplesPage() {
           <ul className="space-y-2">
             <li><Link href="/wiki/templates/yki-message-template" className="text-blue-700 hover:underline">YKI Message Template: Finnish Short Message Structures for Exam</Link></li>
             <li><Link href="/wiki/guides/yki-message-writing-guide" className="text-blue-700 hover:underline">YKI Message Writing Guide: How to Write Short Messages in Finnish</Link></li>
+            <li><Link href="/wiki/scoring/yki-message-writing-scoring" className="text-blue-700 hover:underline">YKI Message Writing Scoring: How Examiners Evaluate Messages</Link></li>
           </ul>
         </nav>
 

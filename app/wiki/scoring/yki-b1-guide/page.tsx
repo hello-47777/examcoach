@@ -1,30 +1,10 @@
 import type { Metadata } from "next";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-const PAGE_TITLE = "How YKI Writing Is Scored (2026 Guide)";
-const PAGE_DESCRIPTION =
-  "Learn exactly how YKI writing is scored in 2026: grammar, vocabulary, task achievement, and coherence, with score tables, weak vs. strong answer examples, and the most common mistakes that cost points.";
-const PAGE_URL = "https://examcoach.ca/wiki/scoring/yki-b1-guide";
-
-export const metadata: Metadata = {
-  title: PAGE_TITLE,
-  description: PAGE_DESCRIPTION,
-  alternates: {
-    canonical: PAGE_URL,
-  },
-  openGraph: {
-    title: PAGE_TITLE,
-    description: PAGE_DESCRIPTION,
-    url: PAGE_URL,
-    siteName: "ExamCoach.ai",
-    locale: "en_US",
-    type: "article",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: PAGE_TITLE,
-    description: PAGE_DESCRIPTION,
-  },
-};
+export const metadata = generateWikiMetadata('scoring', 'yki-b1-guide', {
+  title: 'How YKI Writing Is Scored (2026 Guide)',
+  description: 'Learn exactly how YKI writing is scored in 2026: grammar, vocabulary, task achievement, and coherence, with score tables, weak vs. strong answer examples, and the most common mistakes that cost points.',
+});
 
 const faqs = [
   {

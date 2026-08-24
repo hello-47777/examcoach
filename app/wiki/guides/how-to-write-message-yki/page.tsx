@@ -1,13 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
+export const metadata = generateWikiMetadata('guides', 'how-to-write-message-yki', {
   title: 'How to Write a Message for YKI Writing Test: Step-by-Step Guide',
   description: 'Master the YKI message task with our comprehensive guide. Learn exactly how to write message YKI assignments, avoid common mistakes, and get templates.',
-  alternates: {
-    canonical: '/wiki/guides/how-to-write-message-yki',
-  },
-};
+});
 
 export default function HowToWriteMessageYKI() {
   const faqSchema = {

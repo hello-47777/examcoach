@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "Kirjakieli vs Puhekieli: Mastering Formal Tone for YKI Writing | Pass Finnish",
-  description: "Master the difference between Kirjakieli (written Finnish) and Puhekieli (spoken Finnish) to ensure a passing score on your YKI formal writing tasks."
-};
+export const metadata = generateWikiMetadata('guides', 'kirjakieli-vs-puhekieli', {
+  title: 'Kirjakieli vs Puhekieli: Mastering Formal Tone for YKI Writing | Pass Finnish',
+  description: 'Master the difference between Kirjakieli (written Finnish) and Puhekieli (spoken Finnish) to ensure a passing score on your YKI formal writing tasks.',
+});
 
 export default function KirjakieliVsPuhekieliPage() {
   return (

@@ -1,14 +1,11 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'Common YKI Speaking Mistakes and How to Improve | ExamCoach.ai',
+export const metadata = generateWikiMetadata('guides', 'yki-speaking-mistakes', {
+  title: 'Common YKI Writing: Speaking Mistakes and How to Improve | ExamCoach.ai',
   description: 'Avoid the most common YKI speaking mistakes during your Finnish exam. Learn practical tips, fixes for Finnish speaking errors, and boost your YKI preparation.',
-  alternates: {
-    canonical: '/wiki/guides/yki-speaking-mistakes',
-  },
-  keywords: ['YKI speaking mistakes', 'Finnish speaking errors', 'YKI speaking test', 'YKI preparation', 'common YKI mistakes'],
-};
+});
 
 export default function YkiSpeakingMistakesPage() {
   const faqSchema = {

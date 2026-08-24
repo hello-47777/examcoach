@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "YKI Writing Job Application Guide: How to Write a B1 Level Letter | Pass Finnish",
-  description: "Master the YKI test job application letter with our complete B1 level guide. Learn the 3-paragraph structure, time management tips, and high-level strategy to pass Level 3."
-};
+export const metadata = generateWikiMetadata('guides', 'how-to-write-job-application', {
+  title: 'YKI Writing Job Application Guide: How to Write a B1 Level Letter | Pass Finnish',
+  description: 'Master the YKI test job application letter with our complete B1 level guide. Learn the 3-paragraph structure, time management tips, and high-level strategy to pass Level 3.',
+});
 
 export default function YkiJobApplicationGuide() {
   return (

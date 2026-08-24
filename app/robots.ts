@@ -15,13 +15,13 @@ export default function robots(): MetadataRoute.Robots {
         // 主要搜索引擎显式允许
         userAgent: ['Googlebot', 'Bingbot', 'DuckDuckBot', 'Slurp', 'Baiduspider'],
         allow: '/',
-        disallow: ['/admin/', '/api/', '/dashboard'],
+        disallow: ['/admin/', '/api/', '/dashboard', '/login', '/search'],
       },
       {
         // 其他爬虫兜底规则
         userAgent: '*',
         allow: '/',
-        disallow: ['/admin/', '/api/', '/dashboard'],
+        disallow: ['/admin/', '/api/', '/dashboard', '/login', '/search'],
       },
     ],
     sitemap: 'https://examcoach.ca/sitemap.xml',

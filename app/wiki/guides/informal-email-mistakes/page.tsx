@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "5 Common YKI Informal Email Mistakes That Lower Your Score | Pass Finnish",
-  description: "Avoid the top YKI informal email mistakes that cause candidates to fail the YKI writing test. Learn how to fix these common Finnish email errors for B1-B2 level Finnish writing reference."
-};
+export const metadata = generateWikiMetadata('guides', 'informal-email-mistakes', {
+  title: '5 Common YKI Writing Informal Email Mistakes That Lower Your Score | Pass Finnish',
+  description: 'Avoid the top YKI informal email mistakes that cause candidates to fail the YKI writing test. Learn how to fix these common Finnish email errors for B1-B2 level Finnish writing reference.',
+});
 
 export default function Page() {
   return (

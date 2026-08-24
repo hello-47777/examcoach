@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("essays", "problem-solution-essay", {
   title: "YKI Writing: Problem-Solution Essay Guide & B1 Examples",
   description: "Learn how to structure a high-scoring problem-solution essay for the Finnish YKI exam. Discover formatting rules, example texts, and key vocabulary.",
-};
+});
 
 export default function YkiProblemSolutionEssayPage() {
   return (

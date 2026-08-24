@@ -1,19 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
+export const metadata = generateWikiMetadata('essays', 'yki-writing-level-4-examples', {
   title: 'YKI Writing Level 4 Examples: High Score Finnish Answers',
   description: 'Explore realistic YKI writing level 4 examples with expert explanations. Learn exactly what makes a B2 Finnish writing sample score high in the official exam.',
-  keywords: ['YKI writing level 4 examples', 'B2 Finnish writing sample', 'YKI advanced writing', 'YKI level 4', 'Finnish exam examples'],
-  alternates: {
-    canonical: '/wiki/essays/yki-writing-level-4-examples',
-  },
-  openGraph: {
-    title: 'YKI Writing Level 4 Examples: High Score Finnish Answers',
-    description: 'Explore realistic YKI writing level 4 examples with expert explanations. Learn exactly what makes a B2 Finnish writing sample score high in the official exam.',
-    type: 'article',
-  },
-};
+});
 
 export default function YkiWritingLevel4Examples() {
   const faqData = {

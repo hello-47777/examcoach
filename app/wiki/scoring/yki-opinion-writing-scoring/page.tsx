@@ -1,19 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'YKI Opinion Writing Scoring: How Examiners Grade Your Essay',
+export const metadata = generateWikiMetadata('scoring', 'yki-opinion-writing-scoring', {
+  title: 'YKI Writing: Opinion Writing Scoring: How Examiners Grade Your Essay',
   description: 'Understand the exact YKI opinion writing scoring system. Learn the YKI writing assessment criteria and what separates YKI level 3 writing from level 4.',
-  alternates: {
-    canonical: '/wiki/scoring/yki-opinion-writing-scoring',
-  },
-  openGraph: {
-    title: 'YKI Opinion Writing Scoring: How Examiners Grade Your Essay',
-    description: 'Understand the exact YKI opinion writing scoring system. Learn the YKI writing assessment criteria and what separates YKI level 3 writing from level 4.',
-    type: 'article',
-  }
-};
+});
 
 export default function YkiOpinionWritingScoring() {
   const faqSchema = {
@@ -176,6 +169,7 @@ export default function YkiOpinionWritingScoring() {
           <ul className="space-y-2">
             <li><Link href="/wiki/guides/yki-opinion-essay-structure" className="text-blue-700 hover:underline">YKI Opinion Essay Structure: B1-B2 Writing Framework Explained</Link></li>
             <li><Link href="/wiki/scoring/yki-b1-guide" className="text-blue-700 hover:underline">YKI B1 Guide</Link></li>
+            <li><Link href="/wiki/guides/how-to-write-an-opinion-text-in-finnish" className="text-blue-700 hover:underline">How to Write an Opinion Text in Finnish: YKI Writing Task 2 Strategy</Link></li>
           </ul>
         </nav>
 

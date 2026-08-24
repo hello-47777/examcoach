@@ -1,15 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'YKI Level 3 vs Level 4: What Score Do You Need?',
-  description:
-    'Compare YKI level 3 vs level 4 for the Finnish Keskitaso exam. Understand YKI scoring, Finnish language levels, citizenship requirements, and step-by-step prep strategies.',
-  keywords: ['YKI level 3 vs level 4', 'YKI scoring', 'Finnish language levels', 'YKI keskitaso', 'YKI citizenship requirement'],
-  alternates: {
-    canonical: '/wiki/scoring/yki-level-3-vs-level-4',
-  },
-};
+export const metadata = generateWikiMetadata('scoring', 'yki-level-3-vs-level-4', {
+  title: 'YKI Writing: Level 3 vs Level 4: What Score Do You Need?',
+  description: 'Compare YKI level 3 vs level 4 for the Finnish Keskitaso exam. Understand YKI scoring, Finnish language levels, citizenship requirements, and step-by-step prep strategies.',
+});
 
 export default function YkiLevel3VsLevel4Page() {
   const faqSchema = {

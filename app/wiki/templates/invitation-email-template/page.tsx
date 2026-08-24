@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "YKI Invitation Email Template: Copy, Paste, and Pass",
-  description: "Secure a passing score with our reliable YKI invitation email template. Use this test-proven fill-in-the-blank Finnish cheat sheet for flawless writing.",
-};
+export const metadata = generateWikiMetadata('templates', 'invitation-email-template', {
+  title: 'YKI Writing: Invitation Email Template: Copy, Paste, and Pass',
+  description: 'Secure a passing score with our reliable YKI invitation email template. Use this test-proven fill-in-the-blank Finnish cheat sheet for flawless writing.',
+});
 
 export default function Page() {
   return (

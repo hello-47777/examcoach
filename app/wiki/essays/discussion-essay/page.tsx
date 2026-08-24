@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("essays", "discussion-essay", {
   title: "YKI Writing: Discussion Essay Guide & B1 Examples",
   description: "Learn how to write a balanced discussion essay (keskusteluessee) for the Finnish YKI exam. Step-by-step layout, common pitfalls, and a complete model text.",
-};
+});
 
 export default function YkiDiscussionEssayPage() {
   return (

@@ -22,6 +22,121 @@ export interface WikiArticle {
  * date 字段为发布日期 (北京时间)
  */
 export const scheduledArticles: WikiArticle[] = [
+  // 2026.8.31
+  {
+    slug: '5-minute-proofreading-check-yki-writing-errors',
+    category: 'guides',
+    url: '/wiki/guides/5-minute-proofreading-check-yki-writing-errors',
+    date: '2026-08-31',
+    title: '5-Minute Proofreading: How to Check Your YKI Writing for Errors',
+    keywords: ['check YKI writing errors', 'Finnish grammar check', 'YKI exam proofreading', 'Finnish spelling mistakes', 'YKI writing tips'],
+    topic: 'yki-test-strategy',
+  },
+  // 2026.8.30
+  {
+    slug: 'does-handwriting-matter-yki-writing-test',
+    category: 'guides',
+    url: '/wiki/guides/does-handwriting-matter-yki-writing-test',
+    date: '2026-08-30',
+    title: 'Does Handwriting Matter in the YKI Writing Test? | ExamCoach.ai',
+    keywords: ['YKI handwriting', 'YKI paper test', 'writing clearly Finnish exam', 'YKI grading criteria', 'YKI test tips'],
+    topic: 'yki-test-tips',
+  },
+  {
+    slug: 'what-to-do-if-you-dont-understand-yki-writing-prompt',
+    category: 'guides',
+    url: '/wiki/guides/what-to-do-if-you-dont-understand-yki-writing-prompt',
+    date: '2026-08-30',
+    title: 'What to Do If You Don\'t Understand the YKI Writing Prompt',
+    keywords: ['YKI writing prompt help', 'guessing meaning Finnish', 'YKI test strategies', 'blank mind YKI', 'YKI writing tips'],
+    topic: 'yki-test-strategy',
+  },
+  {
+    slug: 'yki-writing-time-management',
+    category: 'guides',
+    url: '/wiki/guides/yki-writing-time-management',
+    date: '2026-08-30',
+    title: 'YKI Writing Time Management: How to Finish All 3 Tasks',
+    keywords: ['YKI writing time management', 'YKI test duration', 'pacing YKI writing', 'Finnish exam time limits', 'YKI writing tips'],
+    topic: 'yki-test-strategy',
+  },
+  // 2026.8.29
+  {
+    slug: 'express-opinion-finnish-yki',
+    category: 'templates',
+    url: '/wiki/templates/express-opinion-finnish-yki',
+    date: '2026-08-29',
+    title: 'How to Express Your Opinion in Finnish: YKI Task 3 Templates',
+    keywords: ['express opinion Finnish', 'YKI opinion templates', 'minun mielestäni', 'Finnish opinion phrases', 'YKI Task 3'],
+    topic: 'opinion-writing',
+  },
+  // 2026.8.28
+  {
+    slug: 'yki-linking-words-finnish',
+    category: 'templates',
+    url: '/wiki/templates/yki-linking-words-finnish',
+    date: '2026-08-28',
+    title: '30 Essential YKI Linking Words Finnish for High-Scoring Essays',
+    keywords: ['YKI linking words', 'Finnish conjunctions', 'YKI essay vocabulary', 'Finnish connectors', 'essay linking words'],
+    topic: 'yki-linking-words',
+  },
+  // 2026.8.27
+  {
+    slug: 'formal-vs-informal-finnish-yki',
+    category: 'guides',
+    url: '/wiki/guides/formal-vs-informal-finnish-yki',
+    date: '2026-08-27',
+    title: 'Formal vs Informal Finnish: What to Use in YKI Writing',
+    keywords: ['formal vs informal Finnish', 'kirjakieli puhekieli', 'YKI writing tone', 'Finnish register', 'YKI writing tips'],
+    topic: 'formal-vs-informal',
+  },
+  {
+    slug: 'yki-complaint-letter-finnish',
+    category: 'guides',
+    url: '/wiki/guides/yki-complaint-letter-finnish',
+    date: '2026-08-27',
+    title: 'How to Write a Complaint Letter in Finnish for YKI Exam',
+    keywords: ['YKI complaint letter', 'reklamaatio suomeksi', 'Finnish complaint letter', 'YKI writing phrases', 'formal letter Finnish'],
+    topic: 'complaint-letter',
+  },
+  // 2026.8.26
+  {
+    slug: 'yki-formal-email-writing-task-2',
+    category: 'guides',
+    url: '/wiki/guides/yki-formal-email-writing-task-2',
+    date: '2026-08-26',
+    title: 'YKI Formal Email Writing: Complete Guide for Task 2',
+    keywords: ['YKI formal email', 'Task 2 email', 'Finnish formal email', 'YKI writing guide', 'formal email Finnish'],
+    topic: 'formal-email',
+  },
+  {
+    slug: 'yki-task-2-email-examples-job-course',
+    category: 'essays',
+    url: '/wiki/essays/yki-task-2-email-examples-job-course',
+    date: '2026-08-26',
+    title: 'YKI Task 2 Email Examples: Applying for a Job or Course',
+    keywords: ['YKI email examples', 'job application email', 'course application', 'B1 Finnish letter', 'YKI Task 2 examples'],
+    topic: 'email-examples',
+  },
+  // 2026.8.25
+  {
+    slug: 'finnish-writing-correction-online',
+    category: 'guides',
+    url: '/wiki/guides/finnish-writing-correction-online',
+    date: '2026-08-25',
+    title: 'Finnish Writing Correction Online: AI Grammar Feedback',
+    keywords: ['Finnish writing correction', 'AI Finnish correction', 'YKI writing check', 'Finnish grammar checker', 'online writing correction'],
+    topic: 'ai-writing',
+  },
+  {
+    slug: 'yki-writing-feedback',
+    category: 'guides',
+    url: '/wiki/guides/yki-writing-feedback',
+    date: '2026-08-25',
+    title: 'YKI Writing Feedback: How to Fix Your Weaknesses Before Exam',
+    keywords: ['YKI writing feedback', 'Finnish writing mistakes', 'YKI improvement', 'writing feedback', 'YKI writing check'],
+    topic: 'yki-writing-feedback',
+  },
   // 2026.8.24
   {
     slug: 'free-yki-writing-checker',

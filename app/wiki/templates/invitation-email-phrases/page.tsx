@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "YKI Email Invitation Phrases in Finnish to Memorize",
-  description: "Master essential YKI email invitation phrases in Finnish. Access our categorized cheat sheet of useful Finnish phrases, greetings, and sign-offs for the exam.",
-};
+export const metadata = generateWikiMetadata('templates', 'invitation-email-phrases', {
+  title: 'YKI Writing: Email Invitation Phrases in Finnish to Memorize',
+  description: 'Master essential YKI email invitation phrases in Finnish. Access our categorized cheat sheet of useful Finnish phrases, greetings, and sign-offs for the exam.',
+});
 
 export default function Page() {
   return (

@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "7 Fatal YKI Job Application Mistakes That Will Fail Your Exam | Pass Finnish",
-  description: "Don't let easily avoidable errors cost you your B1 certificate. Discover the 7 fatal YKI job application mistakes, from ignoring prompts to generic copy-pasting."
-};
+export const metadata = generateWikiMetadata('templates', 'job-application-errors', {
+  title: 'YKI Writing: 7 Fatal YKI Job Application Mistakes That Will Fail Your Exam | Pass Finnish',
+  description: 'Don\'t let easily avoidable errors cost you your B1 certificate. Discover the 7 fatal YKI job application mistakes, from ignoring prompts to generic copy-pasting.',
+});
 
 export default function JobApplicationMistakesPage() {
   return (

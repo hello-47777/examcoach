@@ -1,16 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: "How to Pass YKI Writing Level 3: Complete B1 Strategy",
-  description:
-    "Discover a step-by-step guide on how to pass YKI writing level 3. Master the Finnish B1 exam format, understand the grading criteria, and secure your passing score.",
-  keywords: ['pass YKI writing level 3', 'YKI passing score', 'YKI B1 writing', 'Finnish B1 exam', 'YKI writing strategy'],
-  alternates: {
-    canonical: '/wiki/guides/pass-yki-writing-level-3',
-  },
-};
+export const metadata = generateWikiMetadata('guides', 'pass-yki-writing-level-3', {
+  title: 'How to Pass YKI Writing Level 3: Complete B1 Strategy',
+  description: 'Discover a step-by-step guide on how to pass YKI writing level 3. Master the Finnish B1 exam format, understand the grading criteria, and secure your passing score.',
+});
 
 export default function PassYkiWritingLevel3Page() {
   const faqSchema = {

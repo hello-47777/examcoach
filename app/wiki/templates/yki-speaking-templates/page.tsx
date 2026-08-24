@@ -1,14 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'YKI Speaking Templates: Useful Finnish Speaking Structures',
+export const metadata = generateWikiMetadata('templates', 'yki-speaking-templates', {
+  title: 'YKI Writing: Speaking Templates: Useful Finnish Speaking Structures',
   description: 'Master the YKI Finnish exam with these practical YKI speaking templates. Learn useful Finnish speaking phrases to structure your YKI speaking answers effectively.',
-  alternates: {
-    canonical: '/wiki/templates/yki-speaking-templates',
-  },
-  keywords: ['YKI speaking templates', 'Finnish speaking phrases', 'YKI speaking answers', 'YKI speaking test', 'Finnish speaking structures'],
-};
+});
 
 export default function YkiSpeakingTemplates() {
   const faqSchema = {

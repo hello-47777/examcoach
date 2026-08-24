@@ -1,19 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
+export const metadata = generateWikiMetadata('guides', 'how-to-write-an-opinion-text-in-finnish', {
   title: 'How to Write an Opinion Text in Finnish: YKI Writing Task 2 Strategy',
   description: 'Learn exactly how to write an opinion text in Finnish. Master the YKI writing task 2 strategy with templates, essential vocabulary, and expert tips.',
-  alternates: {
-    canonical: '/wiki/guides/how-to-write-an-opinion-text-in-finnish',
-  },
-  openGraph: {
-    title: 'How to Write an Opinion Text in Finnish: YKI Writing Task 2 Strategy',
-    description: 'Learn exactly how to write an opinion text in Finnish. Master the YKI writing task 2 strategy with templates, essential vocabulary, and expert tips.',
-    type: 'article',
-  }
-};
+});
 
 export default function HowToWriteAnOpinionTextInFinnish() {
   const faqSchema = {

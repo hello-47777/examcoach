@@ -1,13 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'How to Improve Finnish Writing Skills for YKI Test',
+export const metadata = generateWikiMetadata('guides', 'how-to-improve-finnish-writing-skills-yki-test', {
+  title: 'How to Improve Finnish Writing Skills for YKI Writing Test',
   description: 'Learn exactly how to improve Finnish writing skills for the YKI exam. Discover targeted Finnish writing practice methods and essential YKI writing preparation tips.',
-  alternates: {
-    canonical: '/wiki/guides/how-to-improve-finnish-writing-skills-yki-test',
-  },
-};
+});
 
 export default function HowToImproveFinnishWritingSkills() {
   const faqSchema = {

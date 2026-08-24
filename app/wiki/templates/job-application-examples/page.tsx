@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "YKI Writing Job Application Templates & B1 Examples (Copy-Paste) | Pass Finnish",
-  description: "Copy-paste YKI writing job application templates for IT, Healthcare, and Cleaning industries. Fill-in-the-blank B1-B2 level Finnish writing examples for exam practice."
-};
+export const metadata = generateWikiMetadata('templates', 'job-application-examples', {
+  title: 'YKI Writing Job Application Templates & B1 Examples (Copy-Paste) | Pass Finnish',
+  description: 'Copy-paste YKI writing job application templates for IT, Healthcare, and Cleaning industries. Fill-in-the-blank B1-B2 level Finnish writing examples for exam practice.',
+});
 
 export default function JobApplicationExamplesPage() {
   return (

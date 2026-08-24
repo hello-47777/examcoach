@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { glossaryTerms, getTermBySlug } from '@/lib/glossary-data';
 import { getWikiArticles } from '@/lib/wiki-server';
+import { topicMetas } from '@/lib/topics';
 
 /** 预生成所有 term 路由 (SSG) */
 export function generateStaticParams() {
@@ -22,16 +23,17 @@ export async function generateMetadata({
   }
 
   const url = `https://examcoach.ca/glossary/${term.slug}`;
+  const title = `What Is ${term.title}? YKI Writing Glossary | ExamCoach.ai`;
   return {
-    title: `${term.title} - YKI Writing Glossary | ExamCoach.ai`,
+    title,
     description: term.definition.slice(0, 160),
     alternates: { canonical: url },
     openGraph: {
-      title: `${term.title} - YKI Writing Glossary | ExamCoach.ai`,
+      title,
       description: term.definition.slice(0, 160),
       url,
       siteName: 'ExamCoach.ai',
-      type: 'website',
+      type: 'article',
       locale: 'en_US',
     },
   };
@@ -54,6 +56,16 @@ export default async function GlossaryTermPage({ params }: GlossaryTermPageProps
   const validRelatedArticles = term.relatedArticles.filter((url) =>
     publishedUrls.has(url)
   );
+
+  // 解析 relatedTopics 为真实 Topic Hub 链接
+  const validRelatedTopics = (term.relatedTopics || [])
+    .map((topicSlug) => {
+      const topic = topicMetas.find((t) => t.slug === topicSlug);
+      return topic
+        ? { slug: topic.slug, title: topic.title, href: `/topics/${topic.slug}` }
+        : null;
+    })
+    .filter((t): t is { slug: string; title: string; href: string } => t !== null);
 
   // Term Schema (schema.org/DefinedTerm)
   const termSchema = {
@@ -79,6 +91,23 @@ export default async function GlossaryTermPage({ params }: GlossaryTermPageProps
     ],
   };
 
+  // FAQPage Schema (仅当存在真实 FAQ, TASK 15: 禁止虚构)
+  const faqSchema =
+    term.faq && term.faq.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: term.faq.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: item.answer,
+            },
+          })),
+        }
+      : null;
+
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
       <script
@@ -89,6 +118,12 @@ export default async function GlossaryTermPage({ params }: GlossaryTermPageProps
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
@@ -110,23 +145,68 @@ export default async function GlossaryTermPage({ params }: GlossaryTermPageProps
           ← Back to Glossary
         </Link>
 
-        {/* Term definition */}
+        {/* H1: What Is {Term}? */}
         <article className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 md:p-10 mb-8">
           <div className="flex items-center gap-3 mb-4">
             <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700">
               {term.category}
             </span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-blue-900 tracking-tight mb-4">
-            {term.title}
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-blue-900 tracking-tight mb-6">
+            What Is {term.title}?
           </h1>
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-            {term.definition}
-          </p>
+
+          {/* Definition */}
+          <section className="mb-8">
+            <h2 className="text-xl font-bold text-gray-900 mb-3">Definition</h2>
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+              {term.definition}
+            </p>
+          </section>
+
+          {/* Meaning in English */}
+          {term.meaningInEnglish && (
+            <section className="mb-8">
+              <h2 className="text-xl font-bold text-gray-900 mb-3">Meaning in English</h2>
+              <p className="text-base text-gray-700 leading-relaxed">
+                {term.meaningInEnglish}
+              </p>
+            </section>
+          )}
+
+          {/* Meaning in Finnish */}
+          {term.meaningInFinnish && (
+            <section className="mb-8">
+              <h2 className="text-xl font-bold text-gray-900 mb-3">Meaning in Finnish</h2>
+              <p className="text-base text-gray-700 leading-relaxed">
+                {term.meaningInFinnish}
+              </p>
+            </section>
+          )}
+
+          {/* Why It Matters for YKI */}
+          {term.whyItMatters && (
+            <section className="mb-8">
+              <h2 className="text-xl font-bold text-gray-900 mb-3">Why It Matters for YKI</h2>
+              <p className="text-base text-gray-700 leading-relaxed">
+                {term.whyItMatters}
+              </p>
+            </section>
+          )}
+
+          {/* Example */}
+          {term.example && (
+            <section className="mb-8">
+              <h2 className="text-xl font-bold text-gray-900 mb-3">Example</h2>
+              <p className="text-base text-gray-700 leading-relaxed italic border-l-4 border-blue-200 pl-4">
+                {term.example}
+              </p>
+            </section>
+          )}
 
           {/* Keywords */}
           {term.keywords.length > 0 && (
-            <div className="mt-6 pt-6 border-t border-gray-100">
+            <div className="pt-6 border-t border-gray-100">
               <p className="text-sm font-medium text-gray-500 mb-2">Related keywords:</p>
               <ul className="flex flex-wrap gap-2">
                 {term.keywords.map((kw) => (
@@ -142,7 +222,28 @@ export default async function GlossaryTermPage({ params }: GlossaryTermPageProps
           )}
         </article>
 
-        {/* Related articles */}
+        {/* Related YKI Topics (双向链接 TASK 16) */}
+        {validRelatedTopics.length > 0 && (
+          <section className="mb-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5">
+              Related YKI Topics
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {validRelatedTopics.map((topic) => (
+                <Link
+                  key={topic.slug}
+                  href={topic.href}
+                  className="block bg-white rounded-xl shadow-sm border border-gray-100 p-4 hover:border-blue-200 transition-all"
+                >
+                  <h3 className="text-sm font-semibold text-gray-900">{topic.title}</h3>
+                  <p className="mt-1 text-xs text-blue-600">Explore topic →</p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Related Articles (双向链接 TASK 16: Glossary → Wiki) */}
         {validRelatedArticles.length > 0 && (
           <section className="mb-8">
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5">
@@ -155,11 +256,35 @@ export default async function GlossaryTermPage({ params }: GlossaryTermPageProps
                     href={url}
                     className="block bg-white rounded-xl shadow-sm border border-gray-100 p-5 hover:border-blue-200 hover:shadow transition-all"
                   >
-                    <p className="text-sm text-blue-600">
+                    <p className="text-sm font-medium text-blue-600">
                       Read article →
                     </p>
                     <p className="text-xs text-gray-500 mt-1">{url}</p>
                   </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {/* FAQ (TASK 14-15: 仅当存在真实 FAQ) */}
+        {term.faq && term.faq.length > 0 && (
+          <section className="mb-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5">
+              Frequently Asked Questions
+            </h2>
+            <ul className="space-y-4">
+              {term.faq.map((item) => (
+                <li
+                  key={item.question}
+                  className="bg-white rounded-xl shadow-sm border border-gray-100 p-5"
+                >
+                  <h3 className="text-base font-semibold text-gray-900 mb-2">
+                    {item.question}
+                  </h3>
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {item.answer}
+                  </p>
                 </li>
               ))}
             </ul>
@@ -174,7 +299,7 @@ export default async function GlossaryTermPage({ params }: GlossaryTermPageProps
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {glossaryTerms
               .filter((t) => t.slug !== term.slug)
-              .slice(0, 6)
+              .slice(0, 8)
               .map((other) => (
                 <li key={other.slug}>
                   <Link
@@ -182,6 +307,9 @@ export default async function GlossaryTermPage({ params }: GlossaryTermPageProps
                     className="block bg-white rounded-xl shadow-sm border border-gray-100 p-4 hover:border-blue-200 transition-all"
                   >
                     <h3 className="text-sm font-semibold text-gray-900">{other.title}</h3>
+                    <p className="mt-1 text-xs text-gray-500 line-clamp-2">
+                      {other.definition}
+                    </p>
                   </Link>
                 </li>
               ))}

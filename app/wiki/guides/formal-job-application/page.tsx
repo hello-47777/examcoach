@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "Essential YKI Job Application Vocabulary & Formal Phrases | Pass Finnish",
-  description: "Boost your Finnish B1 YKI writing score with this essential job application vocabulary. Learn formal greetings, action verbs, and transition phrases."
-};
+export const metadata = generateWikiMetadata('guides', 'formal-job-application', {
+  title: 'Essential YKI Writing Job Application Vocabulary & Formal Phrases | Pass Finnish',
+  description: 'Boost your Finnish B1 YKI writing score with this essential job application vocabulary. Learn formal greetings, action verbs, and transition phrases.',
+});
 
 export default function YkiVocabularyPage() {
   return (

@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "How to Write an Informal Email for the YKI Test: Step-by-Step",
-  description: "Learn how to write an informal email for the YKI test with this step-by-step guide. Master Finnish email structure and boost your YKI test preparation.",
-};
+export const metadata = generateWikiMetadata('guides', 'how-to-write-informal-email', {
+  title: 'How to Write an Informal Email for the YKI Writing Test: Step-by-Step',
+  description: 'Learn how to write an informal email for the YKI test with this step-by-step guide. Master Finnish email structure and boost your YKI test preparation.',
+});
 
 export default function Page() {
   return (

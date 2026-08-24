@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
-  title: "Invitation Email Finnish B1 Example for YKI Test Takers",
+export const metadata = generateWikiMetadata("examples", "invitation-email-b1-example", {
+  title: "YKI Writing: Invitation Email Finnish B1 Example for YKI Test Takers",
   description: "Study a realistic invitation email Finnish B1 example for the YKI writing test. Review tailored formal and informal B1 text samples and grammar.",
-};
+});
 
 export default function Page() {
   return (

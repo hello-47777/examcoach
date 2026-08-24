@@ -1,19 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'Finnish Language Test for Citizenship: Complete YKI Guide',
+export const metadata = generateWikiMetadata('guides', 'finnish-language-test-citizenship', {
+  title: 'Finnish Language Test for Citizenship: Complete YKI Writing Guide',
   description: 'Master the Finnish language test for citizenship (YKI). Learn examiner criteria, proven writing templates, speaking frameworks, and strategies to pass B1.',
-  keywords: ['Finnish language test citizenship', 'YKI citizenship requirement', 'Finnish citizenship exam', 'YKI test', 'Finnish citizenship language requirement'],
-  alternates: {
-    canonical: '/wiki/guides/finnish-language-test-citizenship',
-  },
-  openGraph: {
-    title: 'Finnish Language Test for Citizenship: Complete YKI Guide',
-    description: 'Complete guide to passing the YKI Finnish language test for citizenship. Discover examiner scoring rules, practical templates, and actionable preparation steps.',
-    type: 'article',
-  },
-};
+});
 
 export default function FinnishCitizenshipGuidePage() {
   const faqSchema = {

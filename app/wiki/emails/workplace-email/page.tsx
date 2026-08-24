@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("emails", "workplace-email", {
   title: "YKI Writing: Workplace Email Guide & B1 Examples",
   description: "Learn how to write a workplace email (työpaikan sähköposti) for the Finnish YKI exam. Master semi-formal tone, office vocabulary, and B1 structures.",
-};
+});
 
 export default function YkiWorkplaceEmailPage() {
   return (

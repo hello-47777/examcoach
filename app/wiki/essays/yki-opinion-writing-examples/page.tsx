@@ -1,19 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'YKI Opinion Writing Examples: Finnish B1-B2 Sample Essays',
+export const metadata = generateWikiMetadata('essays', 'yki-opinion-writing-examples', {
+  title: 'YKI Writing Opinion Examples: Finnish B1-B2 Sample Essays',
   description: 'Explore realistic YKI opinion writing examples. Review B1 and B2 level Finnish opinion essay examples to understand examiner expectations for YKI task 2.',
-  alternates: {
-    canonical: '/wiki/essays/yki-opinion-writing-examples',
-  },
-  openGraph: {
-    title: 'YKI Opinion Writing Examples: Finnish B1-B2 Sample Essays',
-    description: 'Explore realistic YKI opinion writing examples. Review B1 and B2 level Finnish opinion essay examples to understand examiner expectations for YKI task 2.',
-    type: 'article',
-  }
-};
+});
 
 export default function YkiOpinionWritingExamples() {
   const faqSchema = {
@@ -149,6 +142,7 @@ export default function YkiOpinionWritingExamples() {
           <ul className="space-y-2">
             <li><Link href="/wiki/guides/how-to-write-an-opinion-text-in-finnish" className="text-blue-700 hover:underline">How to Write an Opinion Text in Finnish: YKI Writing Task 2 Strategy</Link></li>
             <li><Link href="/wiki/templates/yki-opinion-essay-templates" className="text-blue-700 hover:underline">YKI Opinion Essay Templates: Finnish Writing Frameworks for B1-B2</Link></li>
+            <li><Link href="/wiki/scoring/yki-opinion-writing-scoring" className="text-blue-700 hover:underline">YKI Opinion Writing Scoring: How Examiners Grade Your Essay</Link></li>
           </ul>
         </nav>
 

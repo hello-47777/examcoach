@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("essays", "travel-report", {
   title: "YKI Writing: Travel Report & Holiday Message Guide & B1 Examples",
   description: "Learn how to write a travel report (matkakertomus) or holiday message to a friend for the Finnish YKI exam. Master past tenses, travel vocabulary, and informal structures.",
-};
+});
 
 export default function YkiTravelReportPage() {
   return (

@@ -1,14 +1,12 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
+import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'Check Finnish Writing Level Online With AI Evaluation',
+export const metadata = generateWikiMetadata('guides', 'check-finnish-writing-level-online', {
+  title: 'YKI Writing: Check Finnish Writing Level Online With AI Evaluation',
   description: 'Prepare for the YKI test. Learn how to check Finnish writing level online using advanced AI language evaluation to improve your score.',
-  alternates: {
-    canonical: '/wiki/guides/check-finnish-writing-level-online',
-  },
-};
+});
 
 export default function CheckFinnishWritingLevelOnlinePage() {
   const faqData = {

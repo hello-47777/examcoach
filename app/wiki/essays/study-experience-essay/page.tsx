@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("essays", "study-experience-essay", {
   title: "YKI Writing: Study Experience Essay Guide & B1 Examples",
   description: "Learn how to write an essay about your study experiences or language courses for the Finnish YKI exam. Master past tenses, opinion phrases, and B1 essay structures.",
-};
+});
 
 export default function YkiStudyExperienceEssayPage() {
   return (

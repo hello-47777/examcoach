@@ -1,19 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'Common YKI Opinion Writing Mistakes and How to Avoid Them',
+export const metadata = generateWikiMetadata('guides', 'common-yki-opinion-writing-mistakes', {
+  title: 'Common YKI Writing Opinion Mistakes and How to Avoid Them',
   description: 'Identify and fix the most common YKI opinion writing mistakes. Learn how to correct frequent Finnish writing errors to secure a passing score on test day.',
-  alternates: {
-    canonical: '/wiki/guides/common-yki-opinion-writing-mistakes',
-  },
-  openGraph: {
-    title: 'Common YKI Opinion Writing Mistakes and How to Avoid Them',
-    description: 'Identify and fix the most common YKI opinion writing mistakes. Learn how to correct frequent Finnish writing errors to secure a passing score on test day.',
-    type: 'article',
-  }
-};
+});
 
 export default function CommonYkiOpinionWritingMistakes() {
   const faqSchema = {
@@ -132,6 +125,7 @@ export default function CommonYkiOpinionWritingMistakes() {
           <ul className="space-y-2">
             <li><Link href="/wiki/guides/yki-opinion-essay-structure" className="text-blue-700 hover:underline">YKI Opinion Essay Structure: B1-B2 Writing Framework Explained</Link></li>
             <li><Link href="/wiki/scoring/yki-opinion-writing-scoring" className="text-blue-700 hover:underline">YKI Opinion Writing Scoring: How Examiners Grade Your Essay</Link></li>
+            <li><Link href="/wiki/essays/yki-opinion-writing-examples" className="text-blue-700 hover:underline">YKI Opinion Writing Examples: Finnish B1-B2 Sample Essays</Link></li>
           </ul>
         </nav>
 

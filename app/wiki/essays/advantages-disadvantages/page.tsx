@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("essays", "advantages-disadvantages", {
   title: "YKI Writing: Advantages and Disadvantages Essay Guide",
   description: "Learn how to write a balanced advantages and disadvantages essay for the Finnish YKI exam. Step-by-step instructions, B1 examples, and key vocabulary.",
-};
+});
 
 export default function YkiAdvantagesDisadvantagesPage() {
   return (

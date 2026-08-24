@@ -45,7 +45,15 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  name: "ExamCoach AI Team",
+  url: "https://examcoach.ca",
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
   name: "ExamCoach.ai",
+  description: "AI-powered YKI Writing Checker for Finnish exam preparation.",
   url: "https://examcoach.ca",
 };
 
@@ -73,6 +81,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
         <script
           type="application/ld+json"

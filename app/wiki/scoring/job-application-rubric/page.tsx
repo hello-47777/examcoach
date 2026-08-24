@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "YKI Writing Job Application Scoring: How to Pass Level 3 | Pass Finnish",
-  description: "Understand the YKI writing rubric. See a side-by-side comparison of a failed Level 2 vs a passed Level 3 job application letter."
-};
+export const metadata = generateWikiMetadata('scoring', 'job-application-rubric', {
+  title: 'YKI Writing Job Application Scoring: How to Pass Level 3 | Pass Finnish',
+  description: 'Understand the YKI writing rubric. See a side-by-side comparison of a failed Level 2 vs a passed Level 3 job application letter.',
+});
 
 export default function JobApplicationScoringPage() {
   return (

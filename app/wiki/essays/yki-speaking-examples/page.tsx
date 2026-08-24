@@ -1,13 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'YKI Speaking Examples: Finnish Speaking Answers for B1-B2',
+export const metadata = generateWikiMetadata('essays', 'yki-speaking-examples', {
+  title: 'YKI Writing: Speaking Examples: Finnish Speaking Answers for B1-B2',
   description: 'Master the YKI oral test with realistic YKI speaking examples. Learn how to structure your Finnish speaking practice to achieve a B1-B2 passing grade.',
-  alternates: {
-    canonical: '/wiki/essays/yki-speaking-examples',
-  },
-};
+});
 
 export default function YKISpeakingExamplesPage() {
   const faqSchema = {

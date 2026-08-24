@@ -97,8 +97,28 @@ export default function FAQPage() {
           </section>
         ))}
 
+        {/* Glossary cross-link (TASK 18: FAQ → Glossary → Wiki → Topic → AI Writing Checker) */}
+        <section className="rounded-2xl bg-white border border-gray-100 shadow-sm p-8">
+          <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
+            Need a term explained?
+          </h2>
+          <p className="text-sm sm:text-base text-gray-600 mb-4">
+            Our YKI Writing Glossary defines {''}
+            <Link href="/glossary" className="text-blue-600 hover:text-blue-700 font-medium">
+              30 key terms
+            </Link>
+            {' '}like kirjakieli, mielipidekirjoitus, task fulfillment, and CEFR levels.
+          </p>
+          <Link
+            href="/glossary"
+            className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700"
+          >
+            Browse the Glossary →
+          </Link>
+        </section>
+
         {/* CTA */}
-        <section className="rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 p-8 text-center shadow-sm">
+        <section className="rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 p-8 text-center shadow-sm mt-8">
           <p className="text-lg sm:text-xl font-semibold text-white mb-2">
             Ready to test your YKI writing?
           </p>

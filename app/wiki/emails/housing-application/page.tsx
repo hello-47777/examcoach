@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("emails", "housing-application", {
   title: "YKI Writing: Housing Application Guide & B1 Examples",
   description: "Learn how to write a formal and effective housing application (asuntohakemus) for the Finnish YKI exam. Master B1-level structures and essential vocabulary.",
-};
+});
 
 export default function YkiHousingApplicationPage() {
   return (

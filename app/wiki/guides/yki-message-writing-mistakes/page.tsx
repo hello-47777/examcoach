@@ -1,14 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'Common YKI Message Writing Mistakes Students Make',
+export const metadata = generateWikiMetadata('guides', 'yki-message-writing-mistakes', {
+  title: 'Common YKI Writing Message Mistakes Students Make',
   description: 'Identify and fix the most common YKI message writing mistakes. Learn how to avoid typical Finnish writing errors and secure a passing grade in your exam.',
-  alternates: {
-    canonical: '/wiki/guides/yki-message-writing-mistakes',
-  },
-};
+});
 
 export default function YkiMessageWritingMistakesPage() {
   const faqSchema = {
@@ -234,6 +232,7 @@ export default function YkiMessageWritingMistakesPage() {
           <ul className="space-y-2">
             <li><Link href="/wiki/guides/yki-message-writing-guide" className="text-blue-700 hover:underline">YKI Message Writing Guide: How to Write Short Messages in Finnish</Link></li>
             <li><Link href="/wiki/scoring/yki-message-writing-scoring" className="text-blue-700 hover:underline">YKI Message Writing Scoring: How Examiners Evaluate Messages</Link></li>
+            <li><Link href="/wiki/essays/yki-message-writing-examples" className="text-blue-700 hover:underline">YKI Message Writing Examples: Finnish Sample Answers Explained</Link></li>
           </ul>
         </nav>
 

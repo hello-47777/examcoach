@@ -1,27 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
-  title: 'YKI Test Preparation Plan: 30 Day Study Schedule',
-  description:
-    'Master the YKI exam with our comprehensive 30-day YKI test preparation plan. Includes a structured study schedule, templates, and essential Finnish exam tips.',
-  keywords: [
-    'YKI test preparation plan',
-    'YKI study schedule',
-    'Finnish exam preparation',
-    'YKI keskitaso plan',
-    'how to study for YKI',
-  ],
-  alternates: {
-    canonical: '/wiki/guides/yki-test-preparation-plan',
-  },
-  openGraph: {
-    title: 'YKI Test Preparation Plan: 30 Day Study Schedule',
-    description:
-      'A complete 30-day strategy and study schedule to pass the intermediate YKI Finnish exam. Includes daily routines, templates, and examiner criteria.',
-    type: 'article',
-  },
-};
+export const metadata = generateWikiMetadata('guides', 'yki-test-preparation-plan', {
+  title: 'YKI Writing Test Preparation Plan: 30 Day Study Schedule',
+  description: 'Master the YKI exam with our comprehensive 30-day YKI test preparation plan. Includes a structured study schedule, templates, and essential Finnish exam tips.',
+});
 
 export default function YkiPreparationPlanPage() {
   const faqSchema = {

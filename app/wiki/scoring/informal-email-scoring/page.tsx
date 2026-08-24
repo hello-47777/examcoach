@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata = {
-  title: "YKI Writing Informal Scoring: How the Email Task is Graded | Pass Finnish",
-  description: "Understand YKI writing informal scoring and the YKI keskitaso assessment criteria. Learn exactly how examiners grade your email and what separates Level 3 from Level 4 for B1-B2 Finnish writing."
-};
+export const metadata = generateWikiMetadata('scoring', 'informal-email-scoring', {
+  title: 'YKI Writing Informal Scoring: How the Email Task is Graded | Pass Finnish',
+  description: 'Understand YKI writing informal scoring and the YKI keskitaso assessment criteria. Learn exactly how examiners grade your email and what separates Level 3 from Level 4 for B1-B2 Finnish writing.',
+});
 
 export default function Page() {
   return (

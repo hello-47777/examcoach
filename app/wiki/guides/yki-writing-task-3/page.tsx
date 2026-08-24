@@ -1,14 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
+export const metadata = generateWikiMetadata('guides', 'yki-writing-task-3', {
   title: 'YKI Writing Task 3 Explained: Complete Message Preparation Guide',
   description: 'Master YKI writing task 3 with our step-by-step guide. Learn reusable templates, essential vocabulary, examiner scoring criteria, and common mistakes to avoid.',
-  alternates: {
-    canonical: '/wiki/guides/yki-writing-task-3',
-  },
-};
+});
 
 export default function YkiWritingTask3Page() {
   const faqSchema = {
@@ -233,6 +231,7 @@ export default function YkiWritingTask3Page() {
           <ul className="space-y-2">
             <li><Link href="/wiki/guides/yki-message-writing-guide" className="text-blue-700 hover:underline">YKI Message Writing Guide: How to Write Short Messages in Finnish</Link></li>
             <li><Link href="/wiki/scoring/yki-message-writing-scoring" className="text-blue-700 hover:underline">YKI Message Writing Scoring: How Examiners Evaluate Messages</Link></li>
+            <li><Link href="/wiki/essays/yki-message-writing-examples" className="text-blue-700 hover:underline">YKI Message Writing Examples: Finnish Sample Answers Explained</Link></li>
           </ul>
         </nav>
 

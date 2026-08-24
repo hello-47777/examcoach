@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { generateWikiMetadata } from "@/lib/wiki-metadata";
 
-export const metadata = {
+export const metadata = generateWikiMetadata("essays", "exam-report", {
   title: "YKI Writing: Exam Report & Teacher Message Guide & B1 Examples",
   description: "Learn how to write a formal message or report to a teacher regarding an exam (absence, retake, or feedback) for the Finnish YKI test. Master B1 vocabulary and structures.",
-};
+});
 
 export default function YkiExamReportPage() {
   return (

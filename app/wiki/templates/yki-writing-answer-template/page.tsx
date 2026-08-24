@@ -1,15 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateWikiMetadata } from '@/lib/wiki-metadata';
 
-export const metadata: Metadata = {
+export const metadata = generateWikiMetadata('templates', 'yki-writing-answer-template', {
   title: 'YKI Writing Answer Template: Structure Every Task | ExamCoach.ai',
   description: 'Master the YKI test with a proven YKI writing answer template. Use our Finnish writing framework and YKI exam template to structure formal emails and opinion pieces.',
-  alternates: {
-    canonical: '/wiki/templates/yki-writing-answer-template',
-  },
-  keywords: ['YKI writing answer template', 'YKI exam template', 'Finnish writing framework', 'YKI writing structure', 'YKI message format'],
-};
+});
 
 export default function YkiWritingAnswerTemplate() {
   const faqSchema = {
