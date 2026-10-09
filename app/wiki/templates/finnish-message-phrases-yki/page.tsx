@@ -339,7 +339,7 @@ export default function FinnishMessagePhrasesYkiPage() {
               Don't just read vocabulary lists—test yourself! Try our YKI exam simulator and get instant AI feedback on how accurately you use these Finnish message phrases.
             </p>
             <Link 
-              href="/signup" 
+              href="/tools/ai-writing-checker" 
               className="inline-block bg-white text-blue-700 font-bold text-lg py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
             >
               Start Practicing Free

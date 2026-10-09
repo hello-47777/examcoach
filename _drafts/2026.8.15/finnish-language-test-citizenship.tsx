@@ -264,7 +264,7 @@ export default function FinnishCitizenshipGuidePage() {
               </p>
               <div className="pt-2">
                 <Link
-                  href="/signup"
+                  href="/tools/ai-writing-checker"
                   className="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg px-8 py-4 rounded-xl transition duration-200 shadow-lg hover:shadow-blue-500/25"
                 >
                   Start YKI Preparation Free

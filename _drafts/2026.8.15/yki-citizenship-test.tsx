@@ -248,7 +248,7 @@ export default function YkiCitizenshipTestGuide() {
           </p>
           <div>
             <Link 
-              href="/signup" 
+              href="/tools/ai-writing-checker" 
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-blue-900 bg-white hover:bg-slate-100 transition-colors duration-200 shadow-xl hover:shadow-2xl"
             >
               Start Practicing for Free

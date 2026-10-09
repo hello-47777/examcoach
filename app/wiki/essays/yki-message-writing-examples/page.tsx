@@ -307,7 +307,7 @@ export default function YkiMessageWritingExamplesPage() {
               Stop wondering if your Finnish messages are correct. Get instant, AI-driven feedback on your grammar, vocabulary, and exam readiness.
             </p>
             <Link 
-              href="/signup" 
+              href="/tools/ai-writing-checker" 
               className="inline-block bg-white text-blue-700 font-bold text-lg py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
             >
               Start Practicing with ExamCoach

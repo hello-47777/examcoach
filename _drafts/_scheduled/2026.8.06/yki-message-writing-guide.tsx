@@ -298,7 +298,7 @@ export default function YkiMessageWritingGuide() {
               Stop guessing if your messages are good enough. Practice with realistic YKI tasks and get instant, AI-driven feedback on your grammar, vocabulary, and tone.
             </p>
             <Link 
-              href="/signup" 
+              href="/tools/ai-writing-checker" 
               className="inline-block bg-white text-blue-700 font-bold text-lg py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
             >
               Start Practicing Now

@@ -32,9 +32,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   return [
-    // 首页
+    // 首页 (无尾斜杠, 与全站 URL 规范保持一致)
     {
-      url: `${baseUrl}/`,
+      url: `${baseUrl}`,
       lastModified,
       changeFrequency: 'weekly',
       priority: 1.0,

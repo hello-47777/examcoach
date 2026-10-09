@@ -244,7 +244,7 @@ export default function YkiMessageWritingMistakesPage() {
               The best way to fix errors is to get immediate feedback. Practice YKI message writing on ExamCoach.ai and let our AI highlight your mistakes before test day.
             </p>
             <Link 
-              href="/signup" 
+              href="/tools/ai-writing-checker" 
               className="inline-block bg-white text-blue-700 font-bold text-lg py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
             >
               Start Practicing Free
